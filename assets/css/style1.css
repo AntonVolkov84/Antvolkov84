@@ -1,0 +1,24 @@
+.conteiner{
+display: flex;
+
+}
+.item {
+	padding: 40px;
+	font-size: 25px;
+	border: 1px solid black;
+	height: fit-content;
+	width: fit-content;
+	flex-basis: 33%;
+	justify-content: spac
+}
+.item_1{
+			
+}
+.item_2{
+		
+}
+.item_3{
+	
+}
+
+	

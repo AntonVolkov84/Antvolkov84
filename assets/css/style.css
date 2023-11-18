@@ -1,516 +1,187 @@
-*{
-	margin:0;
-	padding-bottom: 0;
-}
 body{
-	font-size: 1.2em;
-	background-color: #fff;
-	color: #555;
+  margin: 0 0 0 0;
+  display: grid;
+  grid-template-columns: 1;
+
+}
+header{
+  height: auto;
+}
+h1{
+  font-size: 49px;
+  text-align: center;
+  color: #F4500A;
+}
+h2{
+  margin-left: 10px;
+  width: 850px;
+  color: #F4500A;
+  text-align: center;
+}
+footer{
+  width: 100%;
+}
+a{
+  color: white;
+}
+.backgroun{
+  width: 100%;
+  margin: 0 auto 0 auto;
+  display: flex;
+  justify-content: center;
+  height: 160px;
+  background-color: #1B5A61;
+  position: relative;
+}
+.end{
+  width: 100%;
+  height: 160px;
+  margin: 0 auto 0 auto;
+  background-color: #1B5A61;
+  position: relative;
+}
+.endtext{
+  text-align: center;
+  font-size: 25px;
+  padding: 20px;
+  color: #F4500A;
+}
+.endtext2{
+  font-size: 20px;
+  color: #F4500A;
+  text-align: center;
+}
+.dvig, .dvigcat{
+  margin-left: 10px;
+  padding: 0 50px 0 50px;
+  text-decoration: none;
+}
+.dvig:hover {
+background-color: #7B12EC;
+color: gold;
+}
+.menu{
+  width: 100%;
+  margin: 0 auto 0 auto;
+
+}
+ .menubar{
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  height: auto;
+  background-color: #1B5A61;
+  position: relative;
+  margin: 0 auto 0 auto;
+  padding: 0;
+  list-style-type: none;
+}
+.alice{
+  display: block;
+  position: absolute;
+  right: 0;
+  height: 160px;
+}
+.wrapper{
+  margin: 0 auto 0 auto;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #FAF6EA;
+}
+.shlap{
+  margin-right: 10px;
+}
+.text1{
+  width: 600px;
+  margin-right: 20px;
+}
+.more1{
+  margin: 0 auto 0 auto;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #FAF6EA;
+}
+.more{
+  margin: 0 auto 0 auto;
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #FAF6EA;
+}
+.cat123{
+  max-width: 350px;
+}
+.text2{
+  width: 600px;
+  margin-right: 20px;
+}
+
+.more1 > .text2{
+  padding-left: 10px;
+}
+.positionp{font-size: 20px;
+  color: #F4500A;
+  text-align: center;}
+.position{
+  width: 350px;
+  height: 100%;
+  position: fixed;
+  display: block;
+  right: 0;
+  top: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 40px;
+  transition: 0.2;
+  transform: translateX(100%);
 
 
 }
-
-p{
-	padding: 0 0 20px 0;
-	line-height: 1.7em;
+.close {
+  position: fixed;
+  text-decoration: none;
+  top: 10px;
+  right: 10px;
+  background-color: none;
+  border: none;
+  color: #F4500A;
+}
+.position:target{
+  transform: translateX(0);
 }
 
 
-h1, h2{
-	font: normal 170% 'centry gothic', arial;
-	margin: 0 0 15px 0;
-	padding: 15px 0 5px 0;
-	color: #000;
-}
-
-h2 {
-	font-size: 140%
-
-}
-a, a:hover{
-	outline: none;
-	text-decoration: underline;
-	color: #aeb002;
-
-}
 
 
-ul{
-	margin: 2px 0 22px 17px;
-
-
-}
-
-ul li{
-	margin: 0 0 6px 0;
-	padding: 0 0 4px 5px;
-	line-height: 1.5em;
-}
-
-hr{
-	border: solid 1px f3f3f3;
-
-}
-
-
-.header{
-	background-color: darkslateblue;
-	height: 177px;
-	font-size: 0.8em;
-	margin-left: 0px;
-	margin-right: 0px;
-	width: 100%;
-	min-width: 900px;
-	}
-
-
-.main, .logo, .menubar, .site_content, .footer{
-	margin-left: auto;
-	margin-right: auto;
-	}
-
-.logo {
-
-
-	width: 800px;
-	padding-bottom: 40px;
-	}
-.logo h1, .logo h2{
-	font: normal 300% 'centry gothic', arial, sans-serif;
-	margin 0 0 0 9px;
-
-	}
-
-	.logo_text h1, .logo_text h1 a, .logo_text h1 a:hover{
-		padding: 22px 0 0 0;
-		color: #fff;
-		letter-spacing: 0.1em;
-		text-decoration: none;
-
-
-	}
-	.logo_text h2 {
-		font-size: 0.9em;
-		padding: 4px 0 0 0;
-		color:#999;
-	}
-	.menubar{
-
-		width: 900px;
-		height: 46px;
-	}
-	ul.menu{
-		float: right;
-	}
-	ul.menu li{
-		float: left;
-		padding: 0 0 0 9px;
-		list-style: none;
-		margin: 1px 2px 0 0;
-		font-size: 130%;
-	}
-	ul.menu li a{
-		height: 20px;
-		padding: 0 35px 5px 28px;
-		color: #fff;
-		text-decoration: none;
-		display: flex;
-	}
-	ul.menu li.selected a{
-		color: #aeb002;
-	}
-	ul.menu li a:hover{
-		color: #e4ec04;
-	}
-	.site_content{
-		width: 1600px;
-		overflow: hidden;
-		margin: 20px auto 0 auto;
-		background-color: white;
-	}
-	.sitebar_conteiner{
-		float: right;
-		width: 230px;
-	}
-	.sitebar{
-		float: right;
-		width: 230px;
-		padding: 3%;
-		margin: 0 0 16px 0;
-		border: solid 1px. #f2f2f2;
-		border-radius: 5px;
-		background-color: #f9f9f9
-	}
-.btn{
-	padding-bottom: 6px;
-	background-color: white;
-	cursor: pointer;
-	margin-top: 2px;
-	float: right;
-	
-
-
-}
-
-.sitebar h2{
-	color:#136cb2
-}
-.lables_passreg_text{
-	font-size: 0.7em;
-	margin-top: 3%;
-	margin-left 2%;
-}
-
-.sitebar ul{
-	margin: 0;
-	list-style-type: none;
-	padding-left: 0;
-}
-
-}
-.sitebar ul li{
-	list-style-type: none;
-	margin: 0 0 0 0; 
-}
-.rating_sitebar  {
-	float: right;
-
-}
-.content{
-	text-align: left;
-	width: auto;
-	padding: 0 0 0 5px;
-	float: left;
-
-}
-
-.content a{
-	text-decoration: none;
-}
-.films_block{
-
-	margin-bottom: 5%;
-}
-.films_block img{
-	border-radius: 5px;
-	border: solid 5px white;
-	width: 22%;
-}
-.posts .posts_content{
-	font-size: 0.8em;
-	width: 1200px;
-}
-.info_film_page{
-	margin-top: 2%;
-	margin-bottom: 4%;
-}
-
-.info_film_page .label{
-	font-size: 1.2em;
-}
-
-.info_film_page .value{
-	font-size: 1em;
-	color: #49945a;
-	margin-right: 3%;
-}
-.description_film{
-
-	margin-bottom: 15%;
-	width: 1000px;
-
-}
-
-.description_film img{
-	float: left;
-	margin-right: 2%;
-	border-radius: 5px;
-	border: solid 5px #dad7d5;
-
-
-}
-.reviews {
-	margin-bottom: 4%;
-	font-size: 0.9em;
-
-}
-.review_name{
-background-color: #7268ad;
-width: 87%;
-color: white;
-padding: 1%
-border-top-left-radius: 5px;
-margin-left: 5px;
-border-top-right-radius: 5px;
-padding: 2px 2px 2px 2px;
-}
-.review_text {
-	padding-left: 2%;
-	padding-right: 2%;
-	pedding-top:	2%;
-}
-.send{
-	margin-bottom: 4%;
-
-}
-.send input[type="text"], textarea{
-	border: solid 1px #c3c3c3;
-	padding-top: 5px;
-	margin-bottom: 2%;
-
-
-}
-
-.send input[type="email"]{
-	width: 87%;
-	margin-bottom: 20px;
-}
-.send input[type="text"]{
-	width: 87%;
-
-}
-.send textarea{
-	width: 700px;
-	height: 200px;
-
-}
-.send input[type="submit"]{
-	background-color: #7268ad;
-	padding: 3%;
-	color: white;
-	border-radius: 5%
-
-}
-.contacts{
-float: left;
-width: 400px;
-
-}
-.send textarea{
-	width: 600px;
-
-} 
-.info_films{
-	margin-bottom: 5%;
-	background-color: #f9f9f9;
-	padding: 5%;
-	height: 270px;
-	width: 1000px;
-
-}
-.info_films img{
-	float: left;
-	margin-right: 2%;
-	border-radius: 5px;
-	border: solid 5px #dad7d5;
-	width: 25%
-}
-.button {
-	background-color: #7268ad;
-	padding: 2%;
-	color: white;
-	border-radius: 5px;
-	float: right;
-	margin-top: 5%;
-	clear: both;
-	font-size: 0.8em;
-}
-.button a{
-	color: white;
-}
-table{
-	width: 100%;
-	border: solid 1px #f4f4f4;
-}
-td{
-		border: solid 1px #f4f4f4;
-}
-
-td img{
-	width: 60px;
-	vertical-align: middle;
-	}
-.center {
-	text-align: center;
-}
-.rating{
-font-weight: bold;
-}
-
-
-.footer{
-	width: 100%;
-	height: 100px;
-	padding: 28px 0 5px 0;
-	text-align: center;
-	background-color: darkslateblue;
-	color: #a8aa94;
-	margin-left: 0px;
-	margin-right: 0px;
-	min-width: 900px;
-}
-
-.footer a{
-	color: #a8aa94;
-	text-decoration: none;
-}
-.footer a:hover{
-	color: #fff;
-	text-decoration: none;
-}
-
-.footer p{
-	padding: 0 0 10px 0;
-}
-
-
-/*css Moobile*/
 
 @media only screen
-and (min-device-width: 320px)
-and (max-device-width: 568px){
-	.header {
-		background-color: #257965;
-		min-width: 100%;
-		height: 20%;
-		text-align: center;
-	}
-	.logo{
-		width: 100%;
+and (max-device-width: 320px){
 
-	}
-	.site_content{
-		width: 100%;
+body{
+  margin: 0 0 0 0;
+  display: grid;
+  grid-template-columns: 1;
+}
+.wrapper, .more, .more1{
+  display: block;
+  text-align: center;
+}
+h2, {
+  width: 100%;
+  text-align: center;
+}
+p{
+  display: block;
+  text-align: center;
+  margin: 0 auto ;
+}
 
-	}
-	.menubar{
-		width: 100%;
-		height: 100%;
-	}
-	.content{
-		width: 100%;
-		text-align: center;
-	}
-	.sitebar_conteiner{
-		display: none;
-	}
-	.footer{
-		display: none;
-	}
-	ul.menu{float: none;
-	}
-	ul.menu li{
-		margin: 0;
-		padding: 0;
-		float: none;
-	}
-	.logo h1{
-	font: normal 235% 'centry gotic', arial. sans-serif;
-	}
-	.logo h2{
-	font: normal 235% 'centry gotic', arial. sans-serif;
-	color: white;
-	}
-	.content h1, h2{
-	font: normal 110% 'centry gotic', arial;
-	}
-	.films_block img{
-		width: 50%;
-	}
-	.posts_content p{
-		line-height: 1.5em;
-		text-align: left;
-		width: 30%;
-	}
-	.posts p{
-		font-size: 120%;
-	}
-	/*Films page*/
-	.info_films{
-		float: none;
-		height: 100%;
-		width: 98%;
-		padding: 0;
-	}
-	.info_films img{
-		width: 95%;
-		margin-bottom: 5%;	}
-	.button{
-		float: none;
-	}	
-	/*reiting page*/
-
-	.table{
-		display: block;
-	}
-	th{
-		font-size: 80%;
-	}
-	td{
-		margin: 0;
-		padding: 0;
-		text-align: left;
-		font-size: 100%;
-		
-	}
-	/*Show page*/
-
-	iframe {
-		width: 88%;
-		height: 100%;
-	}
-	.description_film img{
-		width: 90%;
-		float: none;
-		display: block;
-		margin: 0;
-		padding: 0;
-		margin-left: 1%;
-	}
-	.description_film{
-		text-align: left;
-		padding: 0;
-		margin-top: 5%;
-		margin-left: 2%;
-		width: 90%;
-	}
-	.reviews{
-		text-align: left;
-		width: 96%;
-	}
-	.review_name{
-		border-top-left-radius: 5px;
-		border-top-right-radius: 5px; 
-	}
-	.send input[type="text"]{
-		margin: 0;
-		margin-bottom: 2%;
-		width: 95%;
-		
-	}
-	.send textarea{
-		width: 95%;
-	}
-	.send input[type="submit"]{
-		width: 96%;
-	}
-	.menu{
-		margin: 0;
-		padding: 0;
-
-	}
-	/*Contact page*/
-
-	.send input[type="email"]{
-		width: 94%;
-		border-color: black;
-		padding: 1% 1% 1% 1%;
-	}
-	.send input[type="text"]{
-		width: 94%;
-		border: 1%;
-		border-color: black;
-	}
-
-	
 }

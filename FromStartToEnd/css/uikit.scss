@@ -19,4 +19,18 @@
 .h1{
 	@include h1();
 }
-
+.h2{
+	@include h2($align: left);
+}
+.h3{
+	@include h3();
+}
+.p1{
+	@include p1();
+}
+.p2{
+	@include p2();
+}
+.lead{
+	@include lead();
+}

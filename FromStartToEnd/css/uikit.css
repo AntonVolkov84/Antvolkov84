@@ -37,15 +37,39 @@ h1, h2, h3 {
   font-size: 4rem;
   color: #fff;
   font-family: Arial, sans-serif;
-  text-shadow: 0.5px 0.9px 0px rgba(0, 0, 0, 0.3); }
+  text-shadow: 0.5px 0.9px 0px rgba(0, 0, 0, 0.3);
+  margin-bottom: 3rem; }
   @media (min-width: 767px) {
     .h1 {
-      font-size: 5.9rem; } }
+      font-size: 5.9rem;
+      margin-bottom: 5rem; } }
 
 .h2 {
   color: #445161;
   font-size: 3rem;
-  text-align: center;
-  line-height: 1.2; }
+  text-align: left;
+  line-height: 1.2;
+  margin-bottom: 3rem; }
+
+.h3 {
+  color: #445161;
+  font-size: 2.4rem;
+  line-height: 1.25; }
+
+.p1 {
+  font-size: 1.6rem;
+  color: #333333;
+  line-height: 1.5; }
+
+.p2 {
+  font-size: 1.4rem;
+  color: #333333;
+  line-height: 1.29; }
+
+.lead {
+  font-size: 2rem;
+  line-height: 1.8;
+  text-shadow: 0.5px 0.9px 0px rgba(0, 0, 0, 0.3);
+  color: #fff; }
 
 /*# sourceMappingURL=uikit.css.map */

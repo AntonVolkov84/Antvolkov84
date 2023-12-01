@@ -1,0 +1,15 @@
+@import './vars';
+@import '../fonts/fonts';
+@import './_mixins.css';
+*{
+	margin: 0
+	
+}
+html,
+body{
+	font-size: 10px;
+	font-family: $mainFont;
+}
+h1, h2, h3{
+	font-family: $mainFont;
+}

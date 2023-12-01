@@ -1,0 +1,18 @@
+@import url(./_mixins.css);
+@font-face {
+  font-family: 'socialico';
+  src: url("socialico-webfont.woff2") format("woff2"), url("socialico-webfont.woff") format("woff"), url("socialico-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+* {
+  margin: 0; }
+
+html,
+body {
+  font-size: 10px;
+  font-family: Arial, sans-serif; }
+
+h1, h2, h3 {
+  font-family: Arial, sans-serif; }
+
+/*# sourceMappingURL=_reset.css.map */

@@ -1,0 +1,6 @@
+@mixin h1($color:$white){
+	font-size: 5.9rem;
+	color: $color;
+	font-family: $mainFont;
+	text-shadow: $mainShadow;
+}

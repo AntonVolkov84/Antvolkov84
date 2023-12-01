@@ -1,0 +1,22 @@
+@import './vars';
+@import '../fonts/fonts';
+@import './_reset';
+@import './_mixins';
+
+.divider{
+	height: 50px;
+}
+.container{
+	max-width: 1180px;
+	margin: auto;
+}
+.ui__title{
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	margin-top: 2rem;
+	text-decoration: underline;
+}
+.h1{
+	@include h1();
+}
+

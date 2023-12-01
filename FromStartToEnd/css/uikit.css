@@ -1,0 +1,42 @@
+@import url(./_mixins.css);
+@font-face {
+  font-family: 'socialico';
+  src: url("socialico-webfont.woff2") format("woff2"), url("socialico-webfont.woff") format("woff"), url("socialico-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'socialico';
+  src: url("socialico-webfont.woff2") format("woff2"), url("socialico-webfont.woff") format("woff"), url("socialico-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+* {
+  margin: 0; }
+
+html,
+body {
+  font-size: 10px;
+  font-family: Arial, sans-serif; }
+
+h1, h2, h3 {
+  font-family: Arial, sans-serif; }
+
+.divider {
+  height: 50px; }
+
+.container {
+  max-width: 1180px;
+  margin: auto; }
+
+.ui__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  text-decoration: underline; }
+
+.h1 {
+  font-size: 5.9rem;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-shadow: 0.5px 0.9px 0px rgba(0, 0, 0, 0.3); }
+
+/*# sourceMappingURL=uikit.css.map */

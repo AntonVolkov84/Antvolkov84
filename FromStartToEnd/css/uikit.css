@@ -34,9 +34,18 @@ h1, h2, h3 {
   text-decoration: underline; }
 
 .h1 {
-  font-size: 5.9rem;
+  font-size: 4rem;
   color: #fff;
   font-family: Arial, sans-serif;
   text-shadow: 0.5px 0.9px 0px rgba(0, 0, 0, 0.3); }
+  @media (min-width: 767px) {
+    .h1 {
+      font-size: 5.9rem; } }
+
+.h2 {
+  color: #445161;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 1.2; }
 
 /*# sourceMappingURL=uikit.css.map */

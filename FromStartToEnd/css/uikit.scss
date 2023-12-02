@@ -5,6 +5,7 @@
 @import '../components/_features';
 @import '../components/screenshot';
 @import '../components/review';
+@import '../components/_price';
 .divider{
 	height: 50px;
 }
@@ -35,4 +36,7 @@
 }
 .lead{
 	@include lead();
+}
+.btn{
+	@extend %btn;
 }

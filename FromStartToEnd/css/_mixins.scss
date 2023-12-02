@@ -38,3 +38,8 @@
 	text-shadow: $mainShadow;
 	color: $color;
 }
+@mixin img($bg: $primaryColor) {
+	background-color: $bg;
+	object-fit: cover;
+	object-position: center;
+}

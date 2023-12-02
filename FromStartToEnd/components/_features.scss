@@ -1,0 +1,20 @@
+@import '../css/vars';
+@import '../fonts/fonts';
+@import '../css/_reset';
+@import '../css/_mixins';
+
+.feature{
+	padding-left: 4.2rem;
+	width: 100%;
+	position: relative;
+	&__text {
+		@include p1();
+	}
+	&::before {
+		content: url(../images/plus-icon.png);
+		position: absolute;
+		top: 0.4rem;
+		left: 0;
+	}
+
+}

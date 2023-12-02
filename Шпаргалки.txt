@@ -2,3 +2,4 @@ https://cssgradient.io/ - градиент
 https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator - генератор радиуса границ
 https://fls.guru/ - фрилансер по жизни
 https://www.fontsquirrel.com/tools/webfont-generator - генератор шрифтов
+https://www.photopea.com/ - онлайн аналог фотошопа

@@ -9,6 +9,7 @@
 	align-items: center;
 	@media ($tablet){
 		flex-direction: row;
+		align-items: flex-start;
 	}
 	&__image {
 		@include img();

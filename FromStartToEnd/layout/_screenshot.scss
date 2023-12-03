@@ -1,0 +1,42 @@
+@import '../css/vars';
+@import '../fonts/fonts';
+@import '../css/_reset';
+@import '../css/_mixins';
+
+.screenshots{
+	@include section();
+	background-color: $white;
+	
+
+	&__title{
+		@include h2();
+	}
+	&__items{
+		display: flex;
+		flex-direction: column;
+		
+		@media($desctop){
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			
+			
+		}
+		.screenshot{
+			margin-bottom: 2.5rem;
+			
+			&:last-child{
+				margin-bottom: 0;
+			}
+			@media($desctop){
+				flex-basis: calc(50% - 0.8rem);
+				margin-bottom: 0;
+				&:nth-child(n + 3) {
+					margin-top: 3rem;
+				}
+
+			}
+		}
+		
+	}
+}

@@ -17,6 +17,7 @@
 	text-align: $align;
 	line-height: 1.2;
 	margin-bottom: 3rem;
+	font-weight: normal;
 }
 @mixin h3($color: $primaryColor){
 	color: $color;
@@ -47,6 +48,13 @@
 @mixin section($pt: 5rem, $pb:5rem){
 	padding-top: $pt;
 	padding-bottom: $pb;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+
+	@media ($projector){
+		padding-right: 0;
+		padding-left: 0;
+	}
 }
 %input{
 	color: $secondaryColor;

@@ -2,15 +2,12 @@
 @import '../fonts/fonts';
 @import './_reset';
 @import './_mixins';
-@import '../components/_features';
-@import '../components/screenshot';
-@import '../components/review';
-@import '../components/_price';
-@import '../components/_social';
 @import '../layout/_stage';
+@import '../layout/_features';
 
 .container{
 	width: 100%;
 	max-width: 118rem;
 	margin: 0 auto;
+	
 }

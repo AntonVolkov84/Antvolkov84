@@ -6,10 +6,6 @@
 @import url(./_mixins.css);
 @import url(./_mixins.css);
 @import url(./_mixins.css);
-@import url(./_mixins.css);
-@import url(./_mixins.css);
-@import url(./_mixins.css);
-@import url(./_mixins.css);
 @font-face {
   font-family: 'socialico';
   src: url("../fonts/socialico-webfont.woff") format("woff2"), url("../fonts/socialico-webfont.woff2") format("woff"), url("../fonts/socialico-webfont.ttf") format("truetype");
@@ -50,348 +46,6 @@ h1, h2, h3 {
     background-color: #cccccc; }
   .price__btn:focus {
     outline: none; }
-
-@font-face {
-  font-family: 'socialico';
-  src: url("../fonts/socialico-webfont.woff") format("woff2"), url("../fonts/socialico-webfont.woff2") format("woff"), url("../fonts/socialico-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'socialico';
-  src: url("../fonts/socialico-webfont.woff") format("woff2"), url("../fonts/socialico-webfont.woff2") format("woff"), url("../fonts/socialico-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-* {
-  margin: 0; }
-
-html,
-body {
-  font-size: 10px;
-  font-family: Arial, sans-serif; }
-
-h1, h2, h3 {
-  font-family: Arial, sans-serif; }
-
-.price__btn {
-  display: inline-block;
-  background-color: #fff;
-  color: #445161;
-  text-transform: uppercase;
-  font-size: 1.8rem;
-  font-weight: bold;
-  line-height: 1;
-  padding: 1.4rem 4.8rem;
-  cursor: pointer;
-  border: none;
-  text-align: center;
-  user-select: none;
-  text-decoration: none;
-  border-radius: 5px; }
-  .price__btn:hover {
-    background-color: #cccccc; }
-  .price__btn:focus {
-    outline: none; }
-
-.feature {
-  padding-left: 4.2rem;
-  width: 100%;
-  position: relative; }
-  .feature__text {
-    font-size: 1.6rem;
-    color: #333333;
-    line-height: 1.5; }
-  .feature::before {
-    content: url(../images/plus-icon.png);
-    position: absolute;
-    top: 0.4rem;
-    left: 0; }
-
-@font-face {
-  font-family: 'socialico';
-  src: url("../fonts/socialico-webfont.woff") format("woff2"), url("../fonts/socialico-webfont.woff2") format("woff"), url("../fonts/socialico-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-* {
-  margin: 0; }
-
-html,
-body {
-  font-size: 10px;
-  font-family: Arial, sans-serif; }
-
-h1, h2, h3 {
-  font-family: Arial, sans-serif; }
-
-@font-face {
-  font-family: 'socialico';
-  src: url("../fonts/socialico-webfont.woff") format("woff2"), url("../fonts/socialico-webfont.woff2") format("woff"), url("../fonts/socialico-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-.price__btn {
-  display: inline-block;
-  background-color: #fff;
-  color: #445161;
-  text-transform: uppercase;
-  font-size: 1.8rem;
-  font-weight: bold;
-  line-height: 1;
-  padding: 1.4rem 4.8rem;
-  cursor: pointer;
-  border: none;
-  text-align: center;
-  user-select: none;
-  text-decoration: none;
-  border-radius: 5px; }
-  .price__btn:hover {
-    background-color: #cccccc; }
-  .price__btn:focus {
-    outline: none; }
-
-.screenshot {
-  display: flex;
-  flex-direction: column; }
-  @media (min-width: 767px) {
-    .screenshot {
-      flex-direction: row; } }
-  .screenshot__image {
-    background-color: #445161;
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-    height: 15rem;
-    margin-bottom: 1.5rem; }
-    @media (min-width: 767px) {
-      .screenshot__image {
-        flex-shrink: 0;
-        width: 20rem;
-        margin-bottom: 0;
-        margin-right: 1.5rem; } }
-  .screenshot__text {
-    margin-top: -0.5rem; }
-  .screenshot__title {
-    color: #445161;
-    font-size: 2.4rem;
-    line-height: 1.25;
-    margin-bottom: 0.2rem; }
-  .screenshot__desc {
-    font-size: 1.6rem;
-    color: #333333;
-    line-height: 1.5; }
-
-@font-face {
-  font-family: 'socialico';
-  src: url("../fonts/socialico-webfont.woff") format("woff2"), url("../fonts/socialico-webfont.woff2") format("woff"), url("../fonts/socialico-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-* {
-  margin: 0; }
-
-html,
-body {
-  font-size: 10px;
-  font-family: Arial, sans-serif; }
-
-h1, h2, h3 {
-  font-family: Arial, sans-serif; }
-
-@font-face {
-  font-family: 'socialico';
-  src: url("../fonts/socialico-webfont.woff") format("woff2"), url("../fonts/socialico-webfont.woff2") format("woff"), url("../fonts/socialico-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-.price__btn {
-  display: inline-block;
-  background-color: #fff;
-  color: #445161;
-  text-transform: uppercase;
-  font-size: 1.8rem;
-  font-weight: bold;
-  line-height: 1;
-  padding: 1.4rem 4.8rem;
-  cursor: pointer;
-  border: none;
-  text-align: center;
-  user-select: none;
-  text-decoration: none;
-  border-radius: 5px; }
-  .price__btn:hover {
-    background-color: #cccccc; }
-  .price__btn:focus {
-    outline: none; }
-
-.review {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  @media (min-width: 767px) {
-    .review {
-      flex-direction: row; } }
-  .review__image {
-    background-color: #445161;
-    object-fit: cover;
-    object-position: center;
-    width: 7.5rem;
-    height: 7.5rem;
-    border-radius: 50%;
-    margin-bottom: 2.6rem; }
-    @media (min-width: 767px) {
-      .review__image {
-        margin-bottom: 0;
-        margin-right: 2.7rem;
-        flex-shrink: 0; } }
-  .review__text {
-    position: relative;
-    font-size: 1.4rem;
-    color: #333333;
-    line-height: 1.29;
-    background-color: #ebebeb;
-    padding: 1.6rem 2rem 1.2rem 1.5rem;
-    border-radius: 1rem; }
-    .review__text::before {
-      content: "";
-      position: absolute;
-      background-color: #ebebeb;
-      left: calc(50% - 1rem);
-      top: -1rem;
-      width: 2rem;
-      height: 2rem;
-      transform: rotate(45deg); }
-      @media (min-width: 767px) {
-        .review__text::before {
-          top: 2.8rem;
-          left: -1rem; } }
-    .review__text-item {
-      font-style: italic;
-      margin-bottom: 0.8rem; }
-    .review__text-autor {
-      color: #989898; }
-
-@font-face {
-  font-family: 'socialico';
-  src: url("../fonts/socialico-webfont.woff") format("woff2"), url("../fonts/socialico-webfont.woff2") format("woff"), url("../fonts/socialico-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-* {
-  margin: 0; }
-
-html,
-body {
-  font-size: 10px;
-  font-family: Arial, sans-serif; }
-
-h1, h2, h3 {
-  font-family: Arial, sans-serif; }
-
-@font-face {
-  font-family: 'socialico';
-  src: url("../fonts/socialico-webfont.woff") format("woff2"), url("../fonts/socialico-webfont.woff2") format("woff"), url("../fonts/socialico-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-.price__btn {
-  display: inline-block;
-  background-color: #fff;
-  color: #445161;
-  text-transform: uppercase;
-  font-size: 1.8rem;
-  font-weight: bold;
-  line-height: 1;
-  padding: 1.4rem 4.8rem;
-  cursor: pointer;
-  border: none;
-  text-align: center;
-  user-select: none;
-  text-decoration: none;
-  border-radius: 5px; }
-  .price__btn:hover {
-    background-color: #cccccc; }
-  .price__btn:focus {
-    outline: none; }
-
-.price {
-  background-color: #445161;
-  border-radius: 1rem;
-  width: 30rem;
-  padding: 1.6rem 0.2rem 2rem; }
-  .price__title {
-    color: #fff;
-    font-size: 2.4rem;
-    line-height: 1.25;
-    text-align: center;
-    margin-bottom: 1.7rem;
-    line-height: 1; }
-  .price__sum {
-    width: 100%;
-    height: 7.1rem;
-    background-color: #fff;
-    color: #445161;
-    font-size: 40px;
-    text-align: center;
-    padding-top: 2rem;
-    line-height: 1;
-    margin-bottom: 1.5rem; }
-    .price__sum::before {
-      content: "$"; }
-  .price__features {
-    font-size: 1.4rem;
-    color: #fff;
-    line-height: 1.29;
-    line-height: 1.71;
-    padding-left: 3.3rem;
-    padding-right: 3.6rem;
-    margin-bottom: 1.5rem; }
-  .price__btn {
-    margin: 1.8rem;
-    display: block; }
-
-@font-face {
-  font-family: 'socialico';
-  src: url("../fonts/socialico-webfont.woff") format("woff2"), url("../fonts/socialico-webfont.woff2") format("woff"), url("../fonts/socialico-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-* {
-  margin: 0; }
-
-html,
-body {
-  font-size: 10px;
-  font-family: Arial, sans-serif; }
-
-h1, h2, h3 {
-  font-family: Arial, sans-serif; }
-
-@font-face {
-  font-family: 'socialico';
-  src: url("../fonts/socialico-webfont.woff") format("woff2"), url("../fonts/socialico-webfont.woff2") format("woff"), url("../fonts/socialico-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-.price__btn {
-  display: inline-block;
-  background-color: #fff;
-  color: #445161;
-  text-transform: uppercase;
-  font-size: 1.8rem;
-  font-weight: bold;
-  line-height: 1;
-  padding: 1.4rem 4.8rem;
-  cursor: pointer;
-  border: none;
-  text-align: center;
-  user-select: none;
-  text-decoration: none;
-  border-radius: 5px; }
-  .price__btn:hover {
-    background-color: #cccccc; }
-  .price__btn:focus {
-    outline: none; }
-
-.social__icon {
-  font-family: "socialico";
-  font-size: 6rem;
-  letter-spacing: 2px;
-  text-decoration: none;
-  color: #fff; }
-  .social__icon:hover {
-    color: #cccccc; }
 
 @font-face {
   font-family: 'socialico';
@@ -826,6 +480,77 @@ h1, h2, h3 {
     .stage__list-item {
       padding-left: 0.5rem;
       list-style: url("../images/check_icon.png"); }
+
+@font-face {
+  font-family: 'socialico';
+  src: url("../fonts/socialico-webfont.woff") format("woff2"), url("../fonts/socialico-webfont.woff2") format("woff"), url("../fonts/socialico-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'socialico';
+  src: url("../fonts/socialico-webfont.woff") format("woff2"), url("../fonts/socialico-webfont.woff2") format("woff"), url("../fonts/socialico-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+* {
+  margin: 0; }
+
+html,
+body {
+  font-size: 10px;
+  font-family: Arial, sans-serif; }
+
+h1, h2, h3 {
+  font-family: Arial, sans-serif; }
+
+.price__btn {
+  display: inline-block;
+  background-color: #fff;
+  color: #445161;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1;
+  padding: 1.4rem 4.8rem;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  user-select: none;
+  text-decoration: none;
+  border-radius: 5px; }
+  .price__btn:hover {
+    background-color: #cccccc; }
+  .price__btn:focus {
+    outline: none; }
+
+.features {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #f5f5f5; }
+  .features__title {
+    color: #445161;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    font-weight: normal; }
+  .features__items {
+    display: flex;
+    flex-direction: column; }
+    @media (min-width: 767px) {
+      .features__items {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between; } }
+    .features__items .feature {
+      margin-bottom: 1.5rem; }
+      .features__items .feature:last-child {
+        margin-bottom: 0; }
+      @media (min-width: 767px) {
+        .features__items .feature {
+          flex-basis: calc(46% - 1.1rem);
+          margin-bottom: 0; }
+          .features__items .feature:nth-child(n + 3) {
+            margin-top: 1.5rem; } }
 
 .container {
   width: 100%;

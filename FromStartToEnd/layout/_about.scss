@@ -1,0 +1,46 @@
+@import '../css/vars';
+@import '../fonts/fonts';
+@import '../css/_reset';
+@import '../css/_mixins';
+
+.about{
+	@include section();
+	background-color: $white;
+	&__wrapper{
+		display: flex;
+		flex-direction: column-reverse;
+
+		@media ($tablet){
+			flex-direction: row;
+		}
+	}
+	&__title{
+		@include h2($align: left);
+	}
+	&__desc {
+		@include p1();
+		margin-bottom: 2rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__image{
+		@include img();
+
+		height: 245px;
+		width: 100%;
+		margin-bottom: 1.5rem;
+		@media ($tablet){
+			width: 430px;
+			flex-shrink: 0;
+			margin-bottom: 0;
+			margin-left: 5rem;
+		}
+		@media ($desctop){
+			width: 430px;
+			margin-left: 10rem;
+			margin-bottom: 0;
+		}
+	}
+}

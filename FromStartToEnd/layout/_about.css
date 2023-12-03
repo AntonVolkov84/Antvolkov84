@@ -1,0 +1,72 @@
+@import url(./_mixins.css);
+@font-face {
+  font-family: 'socialico';
+  src: url("../fonts/socialico-webfont.woff") format("woff2"), url("../fonts/socialico-webfont.woff2") format("woff"), url("../fonts/socialico-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'socialico';
+  src: url("../fonts/socialico-webfont.woff") format("woff2"), url("../fonts/socialico-webfont.woff2") format("woff"), url("../fonts/socialico-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+* {
+  margin: 0; }
+
+html,
+body {
+  font-size: 10px;
+  font-family: Arial, sans-serif; }
+
+h1, h2, h3 {
+  font-family: Arial, sans-serif; }
+
+.about {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background-color: #fff; }
+  @media (min-width: 1200px) {
+    .about {
+      padding-right: 0;
+      padding-left: 0; } }
+  .about__wrapper {
+    display: flex;
+    flex-direction: column-reverse; }
+    @media (min-width: 767px) {
+      .about__wrapper {
+        flex-direction: row; } }
+  .about__title {
+    color: #445161;
+    font-size: 3rem;
+    text-align: left;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    font-weight: normal; }
+  .about__desc {
+    font-size: 1.6rem;
+    color: #333333;
+    line-height: 1.5;
+    margin-bottom: 2rem; }
+    .about__desc:last-child {
+      margin-bottom: 0; }
+  .about__image {
+    background-color: #445161;
+    object-fit: cover;
+    object-position: center;
+    height: 245px;
+    width: 100%;
+    margin-bottom: 1.5rem; }
+    @media (min-width: 767px) {
+      .about__image {
+        width: 430px;
+        flex-shrink: 0;
+        margin-bottom: 0;
+        margin-left: 5rem; } }
+    @media (min-width: 1024px) {
+      .about__image {
+        width: 430px;
+        margin-left: 10rem;
+        margin-bottom: 0; } }
+
+/*# sourceMappingURL=_about.css.map */

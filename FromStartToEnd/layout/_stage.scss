@@ -22,11 +22,6 @@
 			justify-content: space-between;
 		}
 
-		@media ($desctop){
-			padding-left: 0rem;
-			padding-right: 0rem;
-
-		}
 	}
 	&__title{
 		@include h1();
@@ -40,10 +35,13 @@
 		@media ($tablet) {
 			max-width: 300px;
 			margin-bottom: 0;
+			margin-left: 4rem;
+			margin-bottom: 0;
 		}
 		@media ($desctop) {
 			max-width: 469px;
-			margin-bottom: 0;	
+			margin-bottom: 0;
+			margin-left: 8rem;	
 		}
 	}
 	&__list{

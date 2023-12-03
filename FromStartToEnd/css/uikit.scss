@@ -6,6 +6,7 @@
 @import '../components/screenshot';
 @import '../components/review';
 @import '../components/_price';
+@import '../components/_social';
 .divider{
 	height: 50px;
 }
@@ -39,4 +40,10 @@
 }
 .btn{
 	@extend %btn;
+}
+.input {
+	@extend %input;
+}
+.textarea{
+	@extend %textarea;
 }

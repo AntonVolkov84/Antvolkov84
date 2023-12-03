@@ -1,0 +1,19 @@
+@import '../css/_reset';
+@import '../css/vars';
+@import '../fonts/fonts';
+@import '../css/_mixins';
+
+.social{
+	&__icon {
+		font-family: $iconFont;
+		font-size: 6rem;
+		letter-spacing: 2px;
+		text-decoration: none;
+		color: $white;
+
+
+	&:hover {
+		color: darken($white, 20%);
+	}
+	}
+}

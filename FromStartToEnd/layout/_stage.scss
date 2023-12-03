@@ -1,0 +1,57 @@
+@import '../css/vars';
+@import '../fonts/fonts';
+@import '../css/_reset';
+@import '../css/_mixins';
+@import '../components/_features';
+@import '../components/screenshot';
+@import '../components/review';
+@import '../components/_price';
+@import '../components/_social';
+
+.stage{
+	background-color: $primaryColor;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	@include section();
+	&__wrapper{
+		display: flex;
+		flex-direction: column-reverse;
+
+		@media ($tablet){
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		@media ($desctop){
+			padding-left: 0rem;
+			padding-right: 0rem;
+
+		}
+	}
+	&__title{
+		@include h1();
+	}
+	&__image{
+		@include img($white);
+		width: 100%;
+		height: 21.4rem;
+		margin-bottom: 2rem;
+
+		@media ($tablet) {
+			max-width: 300px;
+			margin-bottom: 0;
+		}
+		@media ($desctop) {
+			max-width: 469px;
+			margin-bottom: 0;	
+		}
+	}
+	&__list{
+		@include lead();
+
+		&-item{
+			padding-left: 0.5rem;
+			list-style: url("../images/check_icon.png");
+		}
+	}
+}

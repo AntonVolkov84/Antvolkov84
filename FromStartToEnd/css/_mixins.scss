@@ -4,11 +4,11 @@
 	color: $color;
 	font-family: $mainFont;
 	text-shadow: $mainShadow;
-	margin-bottom: 3rem;
+	margin-bottom: 1.8rem;
 
 	@media ($tablet) {
 		font-size: 5.9rem;
-		margin-bottom: 5rem;
+		margin-bottom: 3rem;
 	}
 }
 @mixin h2($color: $primaryColor, $align: center) {
@@ -44,6 +44,27 @@
 	object-fit: cover;
 	object-position: center;
 }
+@mixin section($pt: 5rem, $pb:5rem){
+	padding-top: $pt;
+	padding-bottom: $pb;
+}
+%input{
+	color: $secondaryColor;
+	background-color: $white;
+	padding: 1.4rem 1rem;
+	font-size: 1.6rem;
+	line-height: 1;
+	border: none;
+	border-radius: 0.5rem;
+}
+%textarea {
+	@extend %input;
+	resize: none;
+	height: 7rem;
+}
+
+
+
 %btn {
 	display: inline-block;
 	background-color: $white;

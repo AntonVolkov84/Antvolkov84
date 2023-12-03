@@ -25,20 +25,7 @@ body {
 h1, h2, h3 {
   font-family: Arial, sans-serif; }
 
-.textarea, .input {
-  color: #445162;
-  background-color: #fff;
-  padding: 1.4rem 1rem;
-  font-size: 1.6rem;
-  line-height: 1;
-  border: none;
-  border-radius: 0.5rem; }
-
-.textarea {
-  resize: none;
-  height: 7rem; }
-
-.price__btn, .btn {
+.price__btn {
   display: inline-block;
   background-color: #fff;
   color: #445161;
@@ -53,9 +40,9 @@ h1, h2, h3 {
   user-select: none;
   text-decoration: none;
   border-radius: 5px; }
-  .price__btn:hover, .btn:hover {
+  .price__btn:hover {
     background-color: #cccccc; }
-  .price__btn:focus, .btn:focus {
+  .price__btn:focus {
     outline: none; }
 
 @font-face {
@@ -79,20 +66,7 @@ body {
 h1, h2, h3 {
   font-family: Arial, sans-serif; }
 
-.textarea, .input {
-  color: #445162;
-  background-color: #fff;
-  padding: 1.4rem 1rem;
-  font-size: 1.6rem;
-  line-height: 1;
-  border: none;
-  border-radius: 0.5rem; }
-
-.textarea {
-  resize: none;
-  height: 7rem; }
-
-.price__btn, .btn {
+.price__btn {
   display: inline-block;
   background-color: #fff;
   color: #445161;
@@ -107,9 +81,9 @@ h1, h2, h3 {
   user-select: none;
   text-decoration: none;
   border-radius: 5px; }
-  .price__btn:hover, .btn:hover {
+  .price__btn:hover {
     background-color: #cccccc; }
-  .price__btn:focus, .btn:focus {
+  .price__btn:focus {
     outline: none; }
 
 .feature {
@@ -147,20 +121,7 @@ h1, h2, h3 {
   src: url("../fonts/socialico-webfont.woff") format("woff2"), url("../fonts/socialico-webfont.woff2") format("woff"), url("../fonts/socialico-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
-.textarea, .input {
-  color: #445162;
-  background-color: #fff;
-  padding: 1.4rem 1rem;
-  font-size: 1.6rem;
-  line-height: 1;
-  border: none;
-  border-radius: 0.5rem; }
-
-.textarea {
-  resize: none;
-  height: 7rem; }
-
-.price__btn, .btn {
+.price__btn {
   display: inline-block;
   background-color: #fff;
   color: #445161;
@@ -175,9 +136,9 @@ h1, h2, h3 {
   user-select: none;
   text-decoration: none;
   border-radius: 5px; }
-  .price__btn:hover, .btn:hover {
+  .price__btn:hover {
     background-color: #cccccc; }
-  .price__btn:focus, .btn:focus {
+  .price__btn:focus {
     outline: none; }
 
 .screenshot {
@@ -232,20 +193,7 @@ h1, h2, h3 {
   src: url("../fonts/socialico-webfont.woff") format("woff2"), url("../fonts/socialico-webfont.woff2") format("woff"), url("../fonts/socialico-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
-.textarea, .input {
-  color: #445162;
-  background-color: #fff;
-  padding: 1.4rem 1rem;
-  font-size: 1.6rem;
-  line-height: 1;
-  border: none;
-  border-radius: 0.5rem; }
-
-.textarea {
-  resize: none;
-  height: 7rem; }
-
-.price__btn, .btn {
+.price__btn {
   display: inline-block;
   background-color: #fff;
   color: #445161;
@@ -260,9 +208,9 @@ h1, h2, h3 {
   user-select: none;
   text-decoration: none;
   border-radius: 5px; }
-  .price__btn:hover, .btn:hover {
+  .price__btn:hover {
     background-color: #cccccc; }
-  .price__btn:focus, .btn:focus {
+  .price__btn:focus {
     outline: none; }
 
 .review {
@@ -333,20 +281,7 @@ h1, h2, h3 {
   src: url("../fonts/socialico-webfont.woff") format("woff2"), url("../fonts/socialico-webfont.woff2") format("woff"), url("../fonts/socialico-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
-.textarea, .input {
-  color: #445162;
-  background-color: #fff;
-  padding: 1.4rem 1rem;
-  font-size: 1.6rem;
-  line-height: 1;
-  border: none;
-  border-radius: 0.5rem; }
-
-.textarea {
-  resize: none;
-  height: 7rem; }
-
-.price__btn, .btn {
+.price__btn {
   display: inline-block;
   background-color: #fff;
   color: #445161;
@@ -361,9 +296,9 @@ h1, h2, h3 {
   user-select: none;
   text-decoration: none;
   border-radius: 5px; }
-  .price__btn:hover, .btn:hover {
+  .price__btn:hover {
     background-color: #cccccc; }
-  .price__btn:focus, .btn:focus {
+  .price__btn:focus {
     outline: none; }
 
 .price {
@@ -423,20 +358,7 @@ h1, h2, h3 {
   src: url("../fonts/socialico-webfont.woff") format("woff2"), url("../fonts/socialico-webfont.woff2") format("woff"), url("../fonts/socialico-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
-.textarea, .input {
-  color: #445162;
-  background-color: #fff;
-  padding: 1.4rem 1rem;
-  font-size: 1.6rem;
-  line-height: 1;
-  border: none;
-  border-radius: 0.5rem; }
-
-.textarea {
-  resize: none;
-  height: 7rem; }
-
-.price__btn, .btn {
+.price__btn {
   display: inline-block;
   background-color: #fff;
   color: #445161;
@@ -451,9 +373,9 @@ h1, h2, h3 {
   user-select: none;
   text-decoration: none;
   border-radius: 5px; }
-  .price__btn:hover, .btn:hover {
+  .price__btn:hover {
     background-color: #cccccc; }
-  .price__btn:focus, .btn:focus {
+  .price__btn:focus {
     outline: none; }
 
 .social__icon {
@@ -465,56 +387,55 @@ h1, h2, h3 {
   .social__icon:hover {
     color: #cccccc; }
 
-.divider {
-  height: 50px; }
+.stage {
+  background-color: #445161;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem; }
+  .stage__wrapper {
+    display: flex;
+    flex-direction: column-reverse; }
+    @media (min-width: 767px) {
+      .stage__wrapper {
+        flex-direction: row;
+        justify-content: space-between; } }
+    @media (min-width: 1024px) {
+      .stage__wrapper {
+        padding-left: 0rem;
+        padding-right: 0rem; } }
+  .stage__title {
+    font-size: 4rem;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-shadow: 0.5px 0.9px 0px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1.8rem; }
+    @media (min-width: 767px) {
+      .stage__title {
+        font-size: 5.9rem;
+        margin-bottom: 3rem; } }
+  .stage__image {
+    background-color: #fff;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 21.4rem;
+    margin-bottom: 2rem; }
+    @media (min-width: 767px) {
+      .stage__image {
+        max-width: 300px;
+        margin-bottom: 0; } }
+    @media (min-width: 1024px) {
+      .stage__image {
+        max-width: 469px;
+        margin-bottom: 0; } }
+  .stage__list {
+    font-size: 2rem;
+    line-height: 1.8;
+    text-shadow: 0.5px 0.9px 0px rgba(0, 0, 0, 0.3);
+    color: #fff; }
+    .stage__list-item {
+      padding-left: 0.5rem;
+      list-style: url("../images/check_icon.png"); }
 
-.container {
-  max-width: 1180px;
-  margin: auto; }
-
-.ui__title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
-  text-decoration: underline; }
-
-.h1 {
-  font-size: 4rem;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  text-shadow: 0.5px 0.9px 0px rgba(0, 0, 0, 0.3);
-  margin-bottom: 3rem; }
-  @media (min-width: 767px) {
-    .h1 {
-      font-size: 5.9rem;
-      margin-bottom: 5rem; } }
-
-.h2 {
-  color: #445161;
-  font-size: 3rem;
-  text-align: left;
-  line-height: 1.2;
-  margin-bottom: 3rem; }
-
-.h3 {
-  color: #445161;
-  font-size: 2.4rem;
-  line-height: 1.25; }
-
-.p1 {
-  font-size: 1.6rem;
-  color: #333333;
-  line-height: 1.5; }
-
-.p2 {
-  font-size: 1.4rem;
-  color: #333333;
-  line-height: 1.29; }
-
-.lead {
-  font-size: 2rem;
-  line-height: 1.8;
-  text-shadow: 0.5px 0.9px 0px rgba(0, 0, 0, 0.3);
-  color: #fff; }
-
-/*# sourceMappingURL=uikit.css.map */
+/*# sourceMappingURL=_stage.css.map */

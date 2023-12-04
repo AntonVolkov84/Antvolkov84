@@ -64,11 +64,16 @@
 	line-height: 1;
 	border: none;
 	border-radius: 0.5rem;
+
+	&::placeholder{
+		color: $secondaryColor;
+	}
 }
 %textarea {
 	@extend %input;
 	resize: none;
 	height: 7rem;
+	font-family: $mainFont;
 }
 
 

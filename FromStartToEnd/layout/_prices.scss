@@ -1,0 +1,40 @@
+@import '../css/vars';
+@import '../fonts/fonts';
+@import '../css/_reset';
+@import '../css/_mixins';
+
+.prices{
+	@include section();
+	background-color: $white;
+
+	&__title{
+		@include h2();
+	}
+
+	&__items{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@media ($desctop){
+			flex-flow: row wrap;
+			justify-content: space-around;
+			align-items: flex-end;
+		}
+		
+		.price{
+			margin-bottom: 3rem;
+			
+			&:last-child{
+				margin-bottom: 0;
+			}
+			@media ($desctop){
+				margin-bottom: 0;
+			}
+			.price__btn{
+				display: block;
+			}
+		}
+
+	}	
+}

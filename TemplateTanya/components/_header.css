@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'comic';
+  src: url("../fonts/deliusswashcaps-regular-webfont.woff") format("woff"), url("../fonts/deliusswashcaps-regular-webfont.woff2") format("woff2"); }
+.header {
+  width: 1800px;
+  margin: 0 auto;
+  background: #020024;
+  background: linear-gradient(90deg, #020024 0%, rgba(203, 246, 39, 0) 0%, #30f3f1 85%, #b8ef3b 100%, #aaea4a 100%, #7edb79 100%, #98e45d 100%, #00b0ff 100%); }
+  .header__item {
+    display: flex;
+    width: 1780px;
+    padding: 0 0;
+    justify-content: space-between; }
+  .header__item__backet
+  .btn {
+    position: relative;
+    width: 250px;
+    height: 60px;
+    Border-radius: 5px;
+    font-size: 30px;
+    border-color: #303030;
+    border-radius: 10px;
+    right: 10px;
+    color: #303030;
+    top: 0;
+    padding-left: 30px; }
+    .header__item__backet
+    .btn:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-image: url(../icons/backet.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      margin: 0;
+      padding: 0;
+      Left: 40px;
+      top: 0; }
+  .header__title {
+    color: #707070;
+    font-family: comic;
+    font-size: 50px; }
+  .header__item__text__p {
+    color: #303030;
+    font-family: comic;
+    font-size: 30px;
+    width: 700px;
+    border: 1px solid #303030;
+    text-align: center;
+    border-radius: 100px 30px 100px 30px / 50px 30px 50px 30px;
+    margin-top: 0;
+    padding: 0; }
+
+/*# sourceMappingURL=_header.css.map */

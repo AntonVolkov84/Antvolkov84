@@ -1,0 +1,20 @@
+.prices {
+  width: 500px;
+  display: flex;
+  flex-basis: 30%; }
+  .prices__title {
+    color: blue;
+    margin-right: 30px;
+    margin-left: 30px; }
+  .prices__text {
+    color: #ccc; }
+
+body {
+  width: 100%;
+  margin: 0 auto; }
+
+.container {
+  width: 1000px;
+  background-color: green; }
+
+/*# sourceMappingURL=uikit.css.map */

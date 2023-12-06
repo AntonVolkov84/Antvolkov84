@@ -1,0 +1,15 @@
+@import "../fonts/fonts";
+@mixin section(){
+	width: 1800px;
+	margin: 0 auto;
+}
+@mixin h1($color: $titleColor){
+	color: $color;
+	font-family: comic;
+	font-size: 50px;
+}
+@mixin p($color: $parColor){
+	color: $color;
+	font-family: comic;
+	font-size: 30px;
+}

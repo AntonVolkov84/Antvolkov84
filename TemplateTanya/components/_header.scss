@@ -6,61 +6,80 @@
 	background: rgb(2,0,36);
 	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(203,246,39,0) 0%, rgba(48,243,241,1) 85%, rgba(184,239,59,1) 100%, rgba(170,234,74,1) 100%, 
 	rgba(126,219,121,1) 100%, rgba(152,228,93,1) 100%, rgba(0,176,255,1) 100%);
-	&__item{
-		display: flex;
-		width: 1780px;
-		padding: 0 0;
-		justify-content: space-between;
-				
-	}
-
-	&__item__backet
-		.btn{
-		position: relative;
-		width: 250px;
-		height: 60px;
-		Border-radius: 5px;
-		font-size: 30px;
-		border-color: $parColor;
-		border-radius: 10px;
-		right: 10px;
-		color: $parColor;
-		top: 0;
-		padding-left: 30px;
-		
-
-
-
-
-		&:before{
-			content: "";
-			display: block;
-			position: absolute;
-			width: 50px;
-			height: 50px;
-			background-image: url(../icons/backet.png);
-			background-repeat: no-repeat;
-			background-size: 100% 100%;
-			margin: 0;
-			padding: 0;
-			Left: 40px;
-			top: 0;
-			}
-
-
-	}
-
+	box-shadow: 0 5px 10px;
+	
 	&__title{
 		@include h1();
-	}
-	&__item__text__p{
-		@include p();
-		width: 700px;
-		border: 1px solid $parColor;
-		text-align: center;
-		border-radius: 100px 30px 100px 30px / 50px 30px 50px 30px;
-		margin-top: 0;
-		padding: 0;
+		margin: 20px 0 0 20px;
+		transition: 0.5s;
+		&:hover{
+			transform-origin: left center;
+			transform: scale(1.2);
 
+		}
+	}
+	&__text{
+		@include p1();
+		margin-left: 20px;
+		text-shadow: 5px;
+		margin-bottom: 20px;
+	}	
+	&__menu{
+		
+
+		
+		&__items{
+			display: flex;
+			flex-direction: column;
+			list-style: none;
+			color: $menuColor;
+			font-size: 30px;
+			margin-right: 20px;	
+			align-items: center;
+
+		
+									
+				@media($tablet){
+				flex-direction: row;
+				padding: 0;
+				justify-content: space-around ;
+				}
+			&__li{
+				position: relative;
+				width: 300px;
+
+				&:hover > ul {
+					display: initial;
+				}
+
+				&__a{
+					display: block;
+					padding: 10px 10px;
+					text-decoration: none;
+					color: $menuColor;
+					&__ul{
+						display: none;
+						position: absolute;
+						top: 52px;
+						width: 300px;
+						box-shadow: 0 5px 10px;
+						
+
+
+					}
+					&__li{
+						padding: 15px;
+						background-color: $menuBackgroundColor;
+						&__a{
+							text-decoration: none;
+							color: $menuColor;
+						}
+						
+					}
+
+					
+			}	}
+		}
+		
 	}
 }	

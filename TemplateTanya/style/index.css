@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none; }
+
 @font-face {
   font-family: 'comic';
   src: url("../fonts/deliusswashcaps-regular-webfont.woff") format("woff"), url("../fonts/deliusswashcaps-regular-webfont.woff2") format("woff2"); }
@@ -17,11 +24,13 @@
   font-family: 'socialico';
   src: url("../fonts/socialico-webfont.woff") format("woff"), url("../fonts/socialico-webfont.woff2") format("woff2"); }
 .header {
-  width: 100%;
+  width: 700px;
   background: #020024;
   background: linear-gradient(90deg, #020024 0%, rgba(203, 246, 39, 0) 0%, #30f3f1 85%, #b8ef3b 100%, #aaea4a 100%, #7edb79 100%, #98e45d 100%, #00b0ff 100%);
-  box-shadow: 0 5px 10px;
-  width: auto; }
+  box-shadow: 0 5px 10px; }
+  @media (min-width: 767px) {
+    .header {
+      width: 766px; } }
   @media (min-width: 1024px) {
     .header {
       width: 1800px;
@@ -108,7 +117,10 @@
   font-family: 'socialico';
   src: url("../fonts/socialico-webfont.woff") format("woff"), url("../fonts/socialico-webfont.woff2") format("woff2"); }
 .menu {
-  width: 100%; }
+  width: 700px; }
+  @media (min-width: 767px) {
+    .menu {
+      width: 766px; } }
   @media (min-width: 1024px) {
     .menu {
       width: 1800px;
@@ -117,8 +129,15 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start; }
-    .menu__items__videos {
-      display: none; }
+    @media (min-width: 1024px) {
+      .menu__items__videos {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        margin-top: 5rem;
+        margin-bottom: 5rem; } }
     .menu__items__videos__video__title {
       color: #686868;
       font-family: comic;
@@ -156,7 +175,8 @@
       color: #686868;
       font-family: comic;
       font-size: 1rem;
-      margin-left: 0.5rem; }
+      margin-left: 0.5rem;
+      font-size: 2rem; }
       @media (min-width: 767px) {
         .menu__items__photos__photo__text {
           margin-right: 1rem;
@@ -172,11 +192,14 @@
   font-family: 'socialico';
   src: url("../fonts/socialico-webfont.woff") format("woff"), url("../fonts/socialico-webfont.woff2") format("woff2"); }
 .footer {
-  width: 100%;
-  height: 15rem;
+  width: 700px;
+  height: 20rem;
   background: #020024;
   background: linear-gradient(90deg, #020024 0%, rgba(203, 246, 39, 0) 0%, #30f3f1 85%, #b8ef3b 100%, #aaea4a 100%, #7edb79 100%, #98e45d 100%, #00b0ff 100%);
   box-shadow: 0 5px 10px; }
+  @media (min-width: 767px) {
+    .footer {
+      width: 766px; } }
   @media (min-width: 1024px) {
     .footer {
       width: 1800px;
@@ -208,12 +231,8 @@
       font-family: socialico;
       font-size: 3rem;
       color: #686868; }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none; }
+  @media (min-width: 1024px) {
+    .footer {
+      height: 13rem; } }
 
 /*# sourceMappingURL=index.css.map */

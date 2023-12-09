@@ -1,6 +1,11 @@
 @import "../fonts/fonts";
 @mixin section(){
-	width: 100%;
+	width: 700px;
+
+		@media ($tablet) {
+			width: 766px;
+			
+		}
 	
 		@media($desctop){
 		width: 1800px;

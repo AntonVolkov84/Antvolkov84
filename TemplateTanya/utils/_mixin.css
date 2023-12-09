@@ -1,5 +1,8 @@
 @font-face {
   font-family: 'comic';
   src: url("../fonts/deliusswashcaps-regular-webfont.woff") format("woff"), url("../fonts/deliusswashcaps-regular-webfont.woff2") format("woff2"); }
+@font-face {
+  font-family: 'socialico';
+  src: url("../fonts/socialico-webfont.woff") format("woff"), url("../fonts/socialico-webfont.woff2") format("woff2"); }
 
 /*# sourceMappingURL=_mixin.css.map */

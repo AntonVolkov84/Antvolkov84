@@ -8,16 +8,16 @@
 		flex-direction: column;
 		align-items: flex-start;
 			&__videos{
-				display: none;
-				// @media($desctop){
-				// 	width: 100%;
-				// 	display: grid;
-				// 	grid-template-columns: 1fr 1fr;
-				// 	grid-template-rows: 1fr 1fr;
-				// 	justify-items: center;
-				// 	margin-top: 5rem;
-				// 	margin-bottom: 5rem;
-				// }
+				// display: none;
+				@media($desctop){
+					width: 100%;
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					grid-template-rows: 1fr 1fr;
+					justify-items: center;
+					margin-top: 5rem;
+					margin-bottom: 5rem;
+				}
 				
 			}
 		
@@ -61,6 +61,7 @@
 				&__photo__text{
 					@include p2($menuColor);
 					margin-left: 0.5rem;
+					font-size: 2rem;
 					
 					@media($tablet){
 						margin-right: 1rem;

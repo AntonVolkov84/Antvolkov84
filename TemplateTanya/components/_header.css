@@ -1,12 +1,17 @@
 @font-face {
   font-family: 'comic';
   src: url("../fonts/deliusswashcaps-regular-webfont.woff") format("woff"), url("../fonts/deliusswashcaps-regular-webfont.woff2") format("woff2"); }
+@font-face {
+  font-family: 'socialico';
+  src: url("../fonts/socialico-webfont.woff") format("woff"), url("../fonts/socialico-webfont.woff2") format("woff2"); }
 .header {
-  width: 100%;
+  width: 700px;
   background: #020024;
   background: linear-gradient(90deg, #020024 0%, rgba(203, 246, 39, 0) 0%, #30f3f1 85%, #b8ef3b 100%, #aaea4a 100%, #7edb79 100%, #98e45d 100%, #00b0ff 100%);
-  box-shadow: 0 5px 10px;
-  width: auto; }
+  box-shadow: 0 5px 10px; }
+  @media (min-width: 767px) {
+    .header {
+      width: 766px; } }
   @media (min-width: 1024px) {
     .header {
       width: 1800px;

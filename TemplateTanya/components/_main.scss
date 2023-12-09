@@ -8,15 +8,16 @@
 		flex-direction: column;
 		align-items: flex-start;
 			&__videos{
-				@media($desctop){
-					width: 100%;
-					display: grid;
-					grid-template-columns: 1fr 1fr;
-					grid-template-rows: 1fr 1fr;
-					justify-items: center;
-					margin-top: 5rem;
-					margin-bottom: 5rem;
-				}
+				display: none;
+				// @media($desctop){
+				// 	width: 100%;
+				// 	display: grid;
+				// 	grid-template-columns: 1fr 1fr;
+				// 	grid-template-rows: 1fr 1fr;
+				// 	justify-items: center;
+				// 	margin-top: 5rem;
+				// 	margin-bottom: 5rem;
+				// }
 				
 			}
 		

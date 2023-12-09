@@ -1,6 +1,9 @@
 @font-face {
   font-family: 'comic';
   src: url("../fonts/deliusswashcaps-regular-webfont.woff") format("woff"), url("../fonts/deliusswashcaps-regular-webfont.woff2") format("woff2"); }
+@font-face {
+  font-family: 'socialico';
+  src: url("../fonts/socialico-webfont.woff") format("woff"), url("../fonts/socialico-webfont.woff2") format("woff2"); }
 .menu {
   width: 100%; }
   @media (min-width: 1024px) {
@@ -11,15 +14,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start; }
-    @media (min-width: 1024px) {
-      .menu__items__videos {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        justify-items: center;
-        margin-top: 5rem;
-        margin-bottom: 5rem; } }
+    .menu__items__videos {
+      display: none; }
     .menu__items__videos__video__title {
       color: #686868;
       font-family: comic;

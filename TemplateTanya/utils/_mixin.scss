@@ -1,9 +1,10 @@
 @import "../fonts/fonts";
 @mixin section(){
 	width: 100%;
-	margin: 0 auto;
+	
 		@media($desctop){
 		width: 1800px;
+		margin: 0 auto;
 		}
 	
 }

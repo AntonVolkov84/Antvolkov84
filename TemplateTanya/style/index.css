@@ -9,13 +9,13 @@
   src: url("../fonts/deliusswashcaps-regular-webfont.woff") format("woff"), url("../fonts/deliusswashcaps-regular-webfont.woff2") format("woff2"); }
 .header {
   width: 100%;
-  margin: 0 auto;
   background: #020024;
   background: linear-gradient(90deg, #020024 0%, rgba(203, 246, 39, 0) 0%, #30f3f1 85%, #b8ef3b 100%, #aaea4a 100%, #7edb79 100%, #98e45d 100%, #00b0ff 100%);
   box-shadow: 0 5px 10px; }
   @media (min-width: 1024px) {
     .header {
-      width: 1800px; } }
+      width: 1800px;
+      margin: 0 auto; } }
   .header__title {
     color: #707070;
     font-family: comic;
@@ -62,7 +62,7 @@
           display: none;
           position: fixed;
           width: 100%;
-          top: 38rem;
+          top: 37rem;
           box-shadow: 0 0.5rem 1rem;
           background-color: #686868; }
           @media (min-width: 767px) {

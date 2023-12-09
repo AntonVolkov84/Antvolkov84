@@ -5,7 +5,8 @@
   width: 100%;
   background: #020024;
   background: linear-gradient(90deg, #020024 0%, rgba(203, 246, 39, 0) 0%, #30f3f1 85%, #b8ef3b 100%, #aaea4a 100%, #7edb79 100%, #98e45d 100%, #00b0ff 100%);
-  box-shadow: 0 5px 10px; }
+  box-shadow: 0 5px 10px;
+  width: auto; }
   @media (min-width: 1024px) {
     .header {
       width: 1800px;
@@ -13,7 +14,7 @@
   .header__title {
     color: #707070;
     font-family: comic;
-    font-size: 50px;
+    font-size: 5rem;
     margin: 0.2rem 0 0 0.2rem;
     transition: 0.5s; }
     .header__title:hover {
@@ -22,7 +23,7 @@
   .header__text {
     color: #303030;
     font-family: comic;
-    font-size: 30px;
+    font-size: 3rem;
     margin-left: 0.2rem;
     text-shadow: 0.5rem;
     margin-bottom: 0.2rem;
@@ -54,27 +55,31 @@
         color: #686868; }
         .header__menu__items__li__a__ul {
           display: none;
-          position: fixed;
-          width: 100%;
-          top: 37rem;
+          position: relative;
+          top: 0.5rem;
+          margin-bottom: 0.5rem;
           box-shadow: 0 0.5rem 1rem;
-          background-color: #686868; }
+          background-color: #cae7fc; }
           @media (min-width: 767px) {
             .header__menu__items__li__a__ul {
+              width: auto;
               position: absolute;
               top: 5rem;
               top: 0;
-              transform: translateX(25rem); } }
+              transform: translateX(25rem);
+              background-color: #cae7fc; } }
           @media (min-width: 1024px) {
             .header__menu__items__li__a__ul {
               position: absolute;
               top: 5rem;
               transform: translateX(0);
-              width: 100%; } }
+              width: 100%;
+              background-color: #cae7fc; } }
         .header__menu__items__li__a__li {
           margin-top: 1px;
           padding: 1.5rem;
-          background-color: #cae7fc; }
+          background: white;
+          background: linear-gradient(90deg, white 0%, #47f5f3 100%); }
           .header__menu__items__li__a__li:first-child {
             margin-top: 0; }
           .header__menu__items__li__a__li__a {

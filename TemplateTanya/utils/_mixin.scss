@@ -18,6 +18,11 @@
 	font-family: comic;
 	font-size: 3rem;
 }
+@mixin p2($color: $menuColor){
+	color: $color;
+	font-family: comic;
+	font-size: 1rem;
+}
 @mixin h2($color: $parColor){
 	color: $color;
 	font-family: comic;

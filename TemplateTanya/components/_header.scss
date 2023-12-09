@@ -7,6 +7,7 @@
 	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(203,246,39,0) 0%, rgba(48,243,241,1) 85%, rgba(184,239,59,1) 100%, rgba(170,234,74,1) 100%, 
 	rgba(126,219,121,1) 100%, rgba(152,228,93,1) 100%, rgba(0,176,255,1) 100%);
 	box-shadow: 0 5px 10px;
+	width: auto;
 	
 	&__title{
 		@include h1();
@@ -63,37 +64,27 @@
 					color: $menuColor;
 					&__ul{
 						display: none;
-						position: fixed;
-						width: 100%;
-						top: 37rem;
+						position: relative;
+						// width: 100%;
+						top: 0.5rem;
+						margin-bottom: 0.5rem;
 						box-shadow: 0 0.5rem 1rem;
-						background-color: $menuColor;
+						background-color: $menuBackgroundColor;
 						@media($tablet){
+							width: auto;
 							position: absolute;
 							top: 5rem;
 							top: 0;
 							transform: translateX(25rem);
+							background-color: $menuBackgroundColor;
 						}
 						@media($desctop){
 							position: absolute;
 							top: 5rem;
 							transform: translateX(0);
 							width: 100%;
-							
+							background-color: $menuBackgroundColor;
 						}
-
-
-
-
-
-
-						// @media($desctop){
-						// 	width: 100%;
-						// 	top: 0;
-						// }
-						
-
-
 					}
 					&__li{
 						margin-top: 1px;
@@ -101,7 +92,9 @@
 							margin-top: 0;
 						}
 						padding: 1.5rem;
-						background-color: $menuBackgroundColor;
+						background: rgb(255,255,255);
+						background: linear-gradient(90deg, rgba(255,255,255,1) 
+						0%, rgba(71,245,243,1) 100%);
 						&__a{
 							text-decoration: none;
 							color: $menuColor;

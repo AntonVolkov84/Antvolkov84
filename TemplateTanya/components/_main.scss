@@ -2,6 +2,7 @@
 .menu{
 	
 	@include section();
+	
 		&__items{
 		display: flex;
 		flex-direction: column;
@@ -11,8 +12,8 @@
 					width: 100%;
 					display: flex;
 					justify-content: space-around;
+					margin-top: 5rem;
 					margin-bottom: 5rem;
-				
 				}
 				
 			}
@@ -21,6 +22,16 @@
 				@include h2($menuColor);
 			}
 			&__photos{
+				@media($tablet){
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					grid-template-rows: 1fr 1fr;
+					
+				&__photo__img{
+					margin-right: 1rem;
+					margin-left: 1rem;
+				}
+				}
 				@media($desctop){
 					width: 100%;
 					display: flex;
@@ -28,10 +39,10 @@
 				}
 				&__photo__title{
 				@include h2($menuColor);
-				&__photo__text{
-					@include p1($menuColor);
 				}
-			}	
+				&__photo__text{
+					@include p2($menuColor);
+				}	
 			}
 		}
 

@@ -1,5 +1,38 @@
 @font-face {
   font-family: 'comic';
   src: url("../fonts/deliusswashcaps-regular-webfont.woff") format("woff"), url("../fonts/deliusswashcaps-regular-webfont.woff2") format("woff2"); }
+.menu {
+  width: 100%; }
+  @media (min-width: 1024px) {
+    .menu {
+      width: 1800px;
+      margin: 0 auto; } }
+  .menu__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    @media (min-width: 1024px) {
+      .menu__items__videos {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 5rem; } }
+    .menu__items__videos__video__title {
+      color: #686868;
+      font-family: comic;
+      font-size: 2rem; }
+    @media (min-width: 1024px) {
+      .menu__items__photos {
+        width: 100%;
+        display: flex;
+        justify-content: space-around; } }
+    .menu__items__photos__photo__title {
+      color: #686868;
+      font-family: comic;
+      font-size: 2rem; }
+      .menu__items__photos__photo__title__photo__text {
+        color: #686868;
+        font-family: comic;
+        font-size: 3rem; }
 
 /*# sourceMappingURL=_main.css.map */

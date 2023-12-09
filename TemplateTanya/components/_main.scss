@@ -1,1 +1,39 @@
 @import"../utils/index";
+.menu{
+	
+	@include section();
+		&__items{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+			&__videos{
+				@media($desctop){
+					width: 100%;
+					display: flex;
+					justify-content: space-around;
+					margin-bottom: 5rem;
+				
+				}
+				
+			}
+		
+			&__videos__video__title{
+				@include h2($menuColor);
+			}
+			&__photos{
+				@media($desctop){
+					width: 100%;
+					display: flex;
+					justify-content: space-around;
+				}
+				&__photo__title{
+				@include h2($menuColor);
+				&__photo__text{
+					@include p1($menuColor);
+				}
+			}	
+			}
+		}
+
+
+}

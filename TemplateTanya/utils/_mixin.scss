@@ -11,10 +11,15 @@
 @mixin h1($color: $titleColor){
 	color: $color;
 	font-family: comic;
-	font-size: 50px;
+	font-size: 5rem;
 }
 @mixin p1($color: $parColor){
 	color: $color;
 	font-family: comic;
-	font-size: 30px;
+	font-size: 3rem;
+}
+@mixin h2($color: $parColor){
+	color: $color;
+	font-family: comic;
+	font-size: 2rem;
 }

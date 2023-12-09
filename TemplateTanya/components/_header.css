@@ -14,7 +14,7 @@
     color: #707070;
     font-family: comic;
     font-size: 50px;
-    margin: 20px 0 0 20px;
+    margin: 0.2rem 0 0 0.2rem;
     transition: 0.5s; }
     .header__title:hover {
       transform-origin: left center;
@@ -23,50 +23,50 @@
     color: #303030;
     font-family: comic;
     font-size: 30px;
-    margin-left: 20px;
-    text-shadow: 5px;
-    margin-bottom: 20px; }
+    margin-left: 0.2rem;
+    text-shadow: 0.5rem;
+    margin-bottom: 0.2rem; }
   .header__menu__items {
     display: flex;
     flex-direction: column;
     list-style: none;
     color: #686868;
-    font-size: 40px;
-    margin-right: 10px; }
+    font-size: 4rem;
+    margin-right: 1rem; }
     @media (min-width: 1024px) {
       .header__menu__items {
         flex-direction: row;
         padding: 0;
         justify-content: space-around;
-        font-size: 30px;
-        margin-right: 20px;
+        font-size: 3rem;
+        margin-right: 2rem;
         align-items: center; } }
     .header__menu__items__li {
       position: relative;
-      width: 300px; }
+      width: 30rem; }
       .header__menu__items__li:hover > ul {
         display: initial;
         top: 0;
-        transform: translateX(300px); }
+        transform: translateX(30rem); }
         @media (min-width: 1024px) {
           .header__menu__items__li:hover > ul {
-            top: 50px;
+            top: 5rem;
             transform: translateX(0); } }
       .header__menu__items__li__a {
         display: block;
-        padding: 10px 10px;
+        padding: 1rem 1rem;
         text-decoration: none;
         color: #686868; }
         .header__menu__items__li__a__ul {
           display: none;
           position: absolute;
-          top: 52px;
-          width: 300px;
-          box-shadow: 0 5px 10px;
+          top: 5.2rem;
+          width: 30rem;
+          box-shadow: 0 0.5rem 1rem;
           background-color: #686868; }
         .header__menu__items__li__a__li {
           margin-top: 1px;
-          padding: 15px;
+          padding: 1.5rem;
           background-color: #cae7fc; }
           .header__menu__items__li__a__li:first-child {
             margin-top: 0; }

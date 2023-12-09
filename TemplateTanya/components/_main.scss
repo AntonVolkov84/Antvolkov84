@@ -10,8 +10,10 @@
 			&__videos{
 				@media($desctop){
 					width: 100%;
-					display: flex;
-					justify-content: space-around;
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					grid-template-rows: 1fr 1fr;
+					justify-items: center;
 					margin-top: 5rem;
 					margin-bottom: 5rem;
 				}
@@ -24,27 +26,33 @@
 			&__photos{
 
 				@media($tablet){
-					display: grid;
-					grid-template-columns: 1fr 1fr;
-					grid-template-rows: 1fr 1fr;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
 					}
+				@media($desctop){
+					width: 100%;
+					display: grid;
+					grid-template-columns: 1fr 1fr 1fr;
+					grid-template-rows: auto;
+					justify-items: center;
+					margin-left: 3rem;
+					
+				}	
 					
 				&__photo__img{
 					margin-right: 1rem;
 					margin-left: 1rem;
-					width: 30rem;
-					height: 30rem;	
+					width: 43rem;
+					height: 43rem;	
 					@media($desctop){
-						width: 25rem;
-						height: 25rem;
+						width: 30rem;
+						height: 30rem;
 						object-fit: cover;
 					}
 				}
-				@media($desctop){
-					width: 100%;
-					display: flex;
-					justify-content: space-around;
-				}
+				
 				&__photo__title{
 				@include h2($menuColor);
 				margin-left: 0.5rem;
@@ -55,7 +63,11 @@
 					
 					@media($tablet){
 						margin-right: 1rem;
-				}	
+						font-size: 2rem;
+					@media($desctop){
+						margin-right: 6rem;
+					}
+					}
 				}
 			}
 		}

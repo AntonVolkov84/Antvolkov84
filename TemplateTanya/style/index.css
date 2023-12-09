@@ -57,10 +57,14 @@
           position: absolute;
           top: 52px;
           width: 300px;
-          box-shadow: 0 5px 10px; }
+          box-shadow: 0 5px 10px;
+          background-color: #686868; }
         .header__menu__items__li__a__li {
+          margin-top: 1px;
           padding: 15px;
           background-color: #cae7fc; }
+          .header__menu__items__li__a__li:first-child {
+            margin-top: 0; }
           .header__menu__items__li__a__li__a {
             text-decoration: none;
             color: #686868; }

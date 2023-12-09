@@ -63,11 +63,16 @@
 						top: 52px;
 						width: 300px;
 						box-shadow: 0 5px 10px;
+						background-color: $menuColor;
 						
 
 
 					}
 					&__li{
+						margin-top: 1px;
+						&:first-child{
+							margin-top: 0;
+						}
 						padding: 15px;
 						background-color: $menuBackgroundColor;
 						&__a{

@@ -1,7 +1,11 @@
 @import "../fonts/fonts";
 @mixin section(){
-	width: 1800px;
+	width: 100%;
 	margin: 0 auto;
+		@media($desctop){
+		width: 1800px;
+		}
+	
 }
 @mixin h1($color: $titleColor){
 	color: $color;

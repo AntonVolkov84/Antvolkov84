@@ -33,16 +33,17 @@
 			flex-direction: column;
 			list-style: none;
 			color: $menuColor;
-			font-size: 30px;
-			margin-right: 20px;	
-			align-items: center;
-
-		
+			font-size: 40px;
+			margin-right: 10px;	
+				
 									
-				@media($tablet){
+				@media($desctop){
 				flex-direction: row;
 				padding: 0;
 				justify-content: space-around ;
+				font-size: 30px;
+				margin-right: 20px;	
+				align-items: center;
 				}
 			&__li{
 				position: relative;
@@ -50,6 +51,12 @@
 
 				&:hover > ul {
 					display: initial;
+					top: 0;
+					transform: translateX(300px);
+					@media($desctop){
+						top: 50px;
+						transform: translateX(0);
+					}
 				}
 
 				&__a{

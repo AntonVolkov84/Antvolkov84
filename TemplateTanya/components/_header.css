@@ -2,11 +2,14 @@
   font-family: 'comic';
   src: url("../fonts/deliusswashcaps-regular-webfont.woff") format("woff"), url("../fonts/deliusswashcaps-regular-webfont.woff2") format("woff2"); }
 .header {
-  width: 1800px;
+  width: 100%;
   margin: 0 auto;
   background: #020024;
   background: linear-gradient(90deg, #020024 0%, rgba(203, 246, 39, 0) 0%, #30f3f1 85%, #b8ef3b 100%, #aaea4a 100%, #7edb79 100%, #98e45d 100%, #00b0ff 100%);
   box-shadow: 0 5px 10px; }
+  @media (min-width: 1024px) {
+    .header {
+      width: 1800px; } }
   .header__title {
     color: #707070;
     font-family: comic;
@@ -28,19 +31,27 @@
     flex-direction: column;
     list-style: none;
     color: #686868;
-    font-size: 30px;
-    margin-right: 20px;
-    align-items: center; }
-    @media (min-width: 767px) {
+    font-size: 40px;
+    margin-right: 10px; }
+    @media (min-width: 1024px) {
       .header__menu__items {
         flex-direction: row;
         padding: 0;
-        justify-content: space-around; } }
+        justify-content: space-around;
+        font-size: 30px;
+        margin-right: 20px;
+        align-items: center; } }
     .header__menu__items__li {
       position: relative;
       width: 300px; }
       .header__menu__items__li:hover > ul {
-        display: initial; }
+        display: initial;
+        top: 0;
+        transform: translateX(300px); }
+        @media (min-width: 1024px) {
+          .header__menu__items__li:hover > ul {
+            top: 50px;
+            transform: translateX(0); } }
       .header__menu__items__li__a {
         display: block;
         padding: 10px 10px;

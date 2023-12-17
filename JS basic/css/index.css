@@ -1,0 +1,11 @@
+.div {
+  display: none;
+  width: 300px;
+  margin-top: 30px;
+  border: solid 1px grey;
+  padding: 5px; }
+
+.open {
+  display: block; }
+
+/*# sourceMappingURL=index.css.map */

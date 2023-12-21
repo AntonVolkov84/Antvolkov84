@@ -257,11 +257,11 @@ const products = [
 let order = [];
 
 function addToBasket(productId){
-	// if (order.find(el => el.id === productId))
-	// {
-	// 	return alert('Товар уже в корзине!');
+	if (order.find(el => el.id === productId))
+	{
+		return alert('Товар уже в корзине!');
 
-	// };
+	};
 
 	const product = products.find((item) => item.id === productId);
 	order = [...order, product];

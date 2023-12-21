@@ -1,7 +1,7 @@
-// // body{
-// // 	width: 1000px;
-// // 	margin: 0 auto;
-// // }
+body{
+	width: 1000px;
+	margin: 0 auto;
+}
 // // h1{
 // // 	font-size: 2rem;
 // // 	color: black;
@@ -100,13 +100,53 @@
 // // 	display: block;
 // // }
 
-.div {
-	display: none;
-	width: 300px;
-	margin-top: 30px;
-	border: solid 1px grey;
-	padding: 5px;
+// .div {
+// 	display: none;
+// 	width: 300px;
+// 	margin-top: 30px;
+// 	border: solid 1px grey;
+// 	padding: 5px;
+// }
+// .open{
+// 	display: block;
+// }
+
+// .btn{
+// 	font-size: 25px;
+// }
+// .big {
+// height: 1500px;
+// width: 100%;
+// background-color: grey;
+// }
+// .box{
+// 	width: 100%;
+// 	height: 300px;
+// 	background-color: rgba(80, 80, 20, 80);
+// 	text-align: center;
+// }
+// form{
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	margin-top: 20px;
+// 	width: 100%;
+// 	display: flex;
+// 	background-color: grey;
+// height: 400px;
+// transform: translateX(0);
+	
+	
+// }
+// label{
+// 	margin-right: 20px;
+// }
+.button__wrapper{
+	display: flex;
+	width: 1000px;
+	height: 50px;
+	justify-content: space-around;
 }
-.open{
-	display: block;
+.btn5{
+
 }

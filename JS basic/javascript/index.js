@@ -1,76 +1,76 @@
-const win = Math.ceil(Math.random() * 10);
-let i = 1;
-function game(number){
-	if (i >= 5) return alert("Не угадал, игра окончена. Если еще раз хочешь - перезагрузи страницу!");
+// const win = Math.ceil(Math.random() * 10);
+// let i = 1;
+// function game(number){
+// 	if (i >= 5) return alert("Не угадал, игра окончена. Если еще раз хочешь - перезагрузи страницу!");
 	
-	if (number === win){
-		alert("ТЫ ВЫИГРАЛ. СУПЕР ЧЕМПИОН");
-		i = 5;
-	}else if(number < win){
-		alert("Нет, попробуй число больше");
-		i++
-		}else {
-		alert("Нет, попробуй число меньше");
-		i++;
-		}
-}
-const developer = {
-	name: "Anton",
-	sureName: "Volkov",
-	age: 39,
-	maried: true,
-	skills: ["CSS", "HTTP", "Javascript"],
-};
-for (let prop in developer){
-	// console.log(prop, developer[prop]);
-}
-const numbers = [1,2,3,4,5,6,7];
-for (let number of numbers){
-	// console.log(number);
-}
+// 	if (number === win){
+// 		alert("ТЫ ВЫИГРАЛ. СУПЕР ЧЕМПИОН");
+// 		i = 5;
+// 	}else if(number < win){
+// 		alert("Нет, попробуй число больше");
+// 		i++
+// 		}else {
+// 		alert("Нет, попробуй число меньше");
+// 		i++;
+// 		}
+// }
+// const developer = {
+// 	name: "Anton",
+// 	sureName: "Volkov",
+// 	age: 39,
+// 	maried: true,
+// 	skills: ["CSS", "HTTP", "Javascript"],
+// };
+// for (let prop in developer){
+// 	// console.log(prop, developer[prop]);
+// }
+// const numbers = [1,2,3,4,5,6,7];
+// for (let number of numbers){
+// 	// console.log(number);
+// }
 
 
 
-const riddle = {
-	question: "Висит груша, нельзя скушать?",
-	correctAnswer: "лампочка",
-	hints: ["это съедобное", "это фрукт"],
-	tries: 3,
-	checkAnswer(str){
-		if(this.tries < 1){
-			return alert("Игра окончена");
-		}
-		if (str.toLowerCase().includes(this.correctAnswer)){
-			alert("Правильный ответ!!!");
-			console.log('Правильный ответ');
-			this.tries = 0;
-		}else{
-			alert("Неправильный отет");
-			console.log('Неправильный ответ');
-			this.tries--;
-			const hint = this.hints[this.tries === 2 ? 0 : 1];
-			if(this.tries){
-			alert("Подсказка: " + hint);
-			}else{
-				return alert("Игра окончена");
-			}
-		}
+// const riddle = {
+// 	question: "Висит груша, нельзя скушать?",
+// 	correctAnswer: "лампочка",
+// 	hints: ["это съедобное", "это фрукт"],
+// 	tries: 3,
+// 	checkAnswer(str){
+// 		if(this.tries < 1){
+// 			return alert("Игра окончена");
+// 		}
+// 		if (str.toLowerCase().includes(this.correctAnswer)){
+// 			alert("Правильный ответ!!!");
+// 			console.log('Правильный ответ');
+// 			this.tries = 0;
+// 		}else{
+// 			alert("Неправильный отет");
+// 			console.log('Неправильный ответ');
+// 			this.tries--;
+// 			const hint = this.hints[this.tries === 2 ? 0 : 1];
+// 			if(this.tries){
+// 			alert("Подсказка: " + hint);
+// 			}else{
+// 				return alert("Игра окончена");
+// 			}
+// 		}
 
 
-	},
-}
-window.onload = function() {
-	document.getElementById("riddle").innerText = riddle.question;
-}
+// 	},
+// }
+// window.onload = function() {
+// 	document.getElementById("riddle").innerText = riddle.question;
+// }
 
-function check(){
-	const input = document.getElementsByTagName("input")[0];
-	const guessedAnswer = input.value;
-	if(guessedAnswer){
-		riddle.checkAnswer(guessedAnswer);
+// function check(){
+// 	const input = document.getElementsByTagName("input")[0];
+// 	const guessedAnswer = input.value;
+// 	if(guessedAnswer){
+// 		riddle.checkAnswer(guessedAnswer);
 
-	}
-}
+// 	}
+// }
 
 // // // // pop, push удаляеь и добавляет последний элемент массива
 
@@ -237,68 +237,68 @@ function check(){
 // const lastName = 'Doe';
 // console.log('Hy, my name is ' + firstName + ' ' + lastName + '!');
 // console.log(`Hi, my name is ${firstName} ${lastName}!`)
-const products = [
-{
-	id:1,
-	title: 'Lenovo 5m10',
-	price: 3000,
-},
-{
-	id:2,
-	title: 'Acer Aspire',
-	price: 1800,
-},
-{
-	id:3,
-	title: 'Samsung p13',
-	price: 3400,
-},
-];
-let order = [];
+// const products = [
+// {
+// 	id:1,
+// 	title: 'Lenovo 5m10',
+// 	price: 3000,
+// },
+// {
+// 	id:2,
+// 	title: 'Acer Aspire',
+// 	price: 1800,
+// },
+// {
+// 	id:3,
+// 	title: 'Samsung p13',
+// 	price: 3400,
+// },
+// ];
+// let order = [];
 
-function addToBasket(productId){
-	if (order.find(el => el.id === productId))
-	{
-		return alert('Товар уже в корзине!');
+// function addToBasket(productId){
+// 	if (order.find(el => el.id === productId))
+// 	{
+// 		return alert('Товар уже в корзине!');
 
-	};
+// 	};
 
-	const product = products.find((item) => item.id === productId);
-	order = [...order, product];
+// 	const product = products.find((item) => item.id === productId);
+// 	order = [...order, product];
 
-	renderCart();
-	rerenderTotalPrice();
-};
-
-
-function removeFromBasket(productId){
-order = order.filter(item => item.id !== productId);
-renderCart();
-rerenderTotalPrice();
-};
+// 	renderCart();
+// 	rerenderTotalPrice();
+// };
 
 
-function rerenderTotalPrice() {
-	const totalPrice = order.reduce((acc, item) => {
-		return acc + item.price;
-	}, 0);
+// function removeFromBasket(productId){
+// order = order.filter(item => item.id !== productId);
+// renderCart();
+// rerenderTotalPrice();
+// };
 
 
-document.getElementById("total").innerText = totalPrice;
-};
+// function rerenderTotalPrice() {
+// 	const totalPrice = order.reduce((acc, item) => {
+// 		return acc + item.price;
+// 	}, 0);
 
 
-function renderCart() {
-	const cart = document.getElementById("basket-items");
+// document.getElementById("total").innerText = totalPrice;
+// };
 
-	cart.innerHTML = "";
-	order.forEach((item) => {
-		const el = document.createElement("li");
-		el.innerText = item.title;
-		el.onclick = () => removeFromBasket(item.id);
-		cart.appendChild(el);
-	});
-};
+
+// function renderCart() {
+// 	const cart = document.getElementById("basket-items");
+
+// 	cart.innerHTML = "";
+// 	order.forEach((item) => {
+// 		const el = document.createElement("li");
+// 		el.innerText = item.title;
+// 		el.onclick = () => removeFromBasket(item.id);
+// 		cart.appendChild(el);
+// 	});
+// };
 // const btn = document.getElementById('btn');
 // const text = document.querySelector('.btn1');
 // function toggleDivVisibility(){
@@ -502,6 +502,70 @@ function renderCart() {
 // getPictures()
 // .then()
 // .catch()
+
+
+const form0 = document.getElementById('formin');
+const container = document.getElementById('contul');
+const submit0 = document.getElementById('form');
+const finish = document.getElementById('contul2');
+// console.log(formin);
+// console.log(contul);
+// console.log(submit);
+
+
+submit0.addEventListener('submit', printValue, fn1);
+
+function fn1 () {console.log(event)};
+
+function printValue (event){
+	// console.log(event);
+	event.preventDefault();
+	const div = document.createElement('div');
+	div.className = 'contul1';
+
+	const li = document.createElement('li');
+	li.className = 'contli';
+	li.innerText = form0.value;
+	// console.log(form0.value);
+
+	const status = document.createElement('input');
+	status.type = 'checkbox';
+	status.addEventListener('change', handleSvitch);
+
+	const span = document.createElement('span');
+	span.innerHTML = '&times;';
+	span.className = 'spanpointer';
+	span.addEventListener('click', handleClose)
+
+	div.appendChild(status);
+	div.appendChild(li);
+	div.appendChild(span);
+
+	container.appendChild(div);
+
+	function handleClose(){
+		span.closest('div').remove();
+	}
+	function handleSvitch(){
+		const completed = this.checked;
+		if (completed) {
+			const li2 = document.createElement('li');
+			li2.className = 'contli2';
+			li2.innerText = li.innerText;
+			
+			finish.appendChild(li2);
+
+			status.closest('div').remove();
+		}
+	}
+		
+
+}
+
+
+
+
+
 
 
 

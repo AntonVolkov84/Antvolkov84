@@ -141,12 +141,50 @@ body{
 // label{
 // 	margin-right: 20px;
 // }
-.button__wrapper{
-	display: flex;
-	width: 1000px;
-	height: 50px;
-	justify-content: space-around;
-}
-.btn5{
+// .button__wrapper{
+// 	display: flex;
+// 	width: 1000px;
+// 	height: 50px;
+	
+// }
+// .btn5{
+
+// }
+.contul {
+	width: 800px;
+	height: 100%;
 
 }
+.contul1{
+	position: relative;
+	display: flex;
+	// justify-content: space-between;
+}	
+
+
+.contli{
+	list-style: none;
+	color: grey;
+	margin: o 5px;
+	padding: 0 5px;
+	overflow: wrap;
+	color: red;
+}
+.spanpointer{
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	float: right;
+	cursor: pointer;
+}
+.contul2{
+	@extend .contul;
+}
+.contli2{
+	font-size: 25px;
+	color: green;
+	width: 800px;
+	list-style: none;
+	word-wrap: wrap;
+}
+

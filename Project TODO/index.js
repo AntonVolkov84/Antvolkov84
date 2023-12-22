@@ -144,3 +144,11 @@ async function deleteTodo(todoId){
 	}
 }
 })()
+
+
+const form0 = document.getElementById('form');
+const container = document.getElementById('contul');
+
+function takeValueInput (){
+	const value = this.childElement.value;
+}

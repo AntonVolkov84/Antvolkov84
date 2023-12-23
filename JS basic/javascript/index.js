@@ -568,5 +568,3 @@ function printValue (event){
 
 
 
-
-

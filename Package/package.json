@@ -1,0 +1,11 @@
+{
+  "name": "firstinit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "print": "node index.js"
+  },
+  "author": "Volkov Anton",
+  "license": "ISC"
+}

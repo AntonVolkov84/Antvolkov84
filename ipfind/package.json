@@ -1,0 +1,12 @@
+{
+  "name": "ipfind",
+  "version": "1.0.0",
+  "description": "find by id",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Anton Volkov",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}

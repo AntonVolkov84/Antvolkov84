@@ -1,0 +1,16 @@
+{
+  "name": "parcel",
+  "version": "1.0.0",
+  "description": "parcel",
+  "main": "index.js",
+  "scripts": {
+    "print": "node index.js",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Anton Volkov",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}

@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "find by id",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html --out-dir=build"
+  },
   "author": "Anton Volkov",
   "license": "ISC",
   "devDependencies": {

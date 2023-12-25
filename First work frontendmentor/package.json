@@ -1,0 +1,14 @@
+{
+  "name": "first-work-frontendmentor",
+  "version": "1.0.0",
+  "description": "![Design preview for the Interactive comments section coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}

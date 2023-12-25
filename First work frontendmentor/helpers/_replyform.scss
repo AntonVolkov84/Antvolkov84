@@ -1,0 +1,45 @@
+@import '_vars';
+@import '_mixin';
+.reply{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: flex;
+	background-color: $white;
+	border-radius: 5px;
+	&__img{
+		margin: 20px 0 20px 20px;
+		width: 40px;
+		height: 40px;
+	}
+	&__form{
+		margin-left: 20px;
+		margin-top: 20px;
+
+		&__input{
+			border:1px solid $mblue;
+			border-radius: 5px;
+			width: 600px;
+			height: 100px;
+			resize: vertical;
+			margin-bottom: 20px;
+		}
+		&__btn{
+			width: 80px;
+			height: 35px;
+			color: $white;
+			background-color: $mblue;
+			border-radius: 5px;
+			margin-left: 20px;
+			border: none;
+			&:hover{
+			cursor: pointer;
+			background-color: $lblue;
+
+			}
+		}	
+		&__all{
+			display: flex;
+			align-items: flex-start;
+		}
+	}
+}	

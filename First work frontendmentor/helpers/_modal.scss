@@ -1,0 +1,44 @@
+@import '_vars';
+@import '_mixin';
+
+.modal{
+	display: none;
+	width: 250px;
+	height: 160px;
+	border-radius: 5px;
+	background-color: $vlgrey;
+	padding: 20px;
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	&__title{
+		@include points($dblue);
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	&__p{
+		@include points($gblue);
+		margin-bottom: 20px;
+	}
+	&__buttons{
+		display: flex;
+		justify-content: space-around;
+
+		&__no{
+			width: 100px;
+			height: 30px;
+			border: none;
+			border-radius: 5px;
+			background-color: $dblue;
+			color: $white;
+		}
+		&__yes{
+			width: 100px;
+			height: 30px;
+			border: none;
+			border-radius: 5px;
+			background-color: $pred;
+			color: $white;
+		}
+	}
+}

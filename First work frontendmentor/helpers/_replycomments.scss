@@ -1,0 +1,86 @@
+@import '_vars';
+@import '_mixin';
+.replyto{
+	display: flex;
+
+	
+	&__vl{
+		margin-top: 20px;
+		margin-right: 50px;
+		width: 50px;
+		height: 150px;
+		border-right: 1px solid;
+		border-right-color: $gblue;
+	}
+
+	&__comment{
+		width: 700px;
+		margin-top: 20px;
+		display: flex;
+		background-color: $white;
+		border-radius: 5px;
+
+		&__points{
+			width: 50px;
+			height: 100px;
+			margin: 20px 20px 20px;
+			background-color: $lgrey;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			border-radius: 5px;
+			&__point{
+				@include points();
+			}
+			&__img{
+
+				fill: $mblue;
+				text-align: center;
+				cursor: pointer;
+				
+			}
+		}
+		&__body{
+			margin-top: 20px;
+			&__title{
+				display: flex;
+				align-items: center;
+				position: relative;
+				&__img{
+					width: 32px;
+					height: 32px;
+				}
+				&__name{
+					@include points($dblue);
+					margin-right: 20px;
+					margin-left: 20px;
+				}
+				&__time{
+					@include points(grey);
+					margin-right: 20px;
+				}
+				&__reply{
+					@include points($lblue);
+					margin-left: 20px;
+					&__all{
+						position: absolute;
+						right: 20px;
+						margin-right: 20px;
+						&:hover{
+							cursor: pointer;
+						}
+					}
+				}
+			}
+			&__text{
+			margin-top: 5px;
+			@include points($gblue);
+			font-weight: 400;
+		
+		}
+		}	
+
+
+	}
+}	

@@ -1,4 +1,4 @@
-import {data} from "./data.js"; 
+import {data} from "./data"; 
 const replyInput = document.querySelector('.reply__form__input');
 const replySubmit = document.getElementById('form');
 const blockComment = document.querySelector('.comment');

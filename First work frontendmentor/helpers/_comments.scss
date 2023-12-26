@@ -7,7 +7,7 @@
 	border-radius: 5px;
 
 	&__points{
-		width: 50px;
+		width: 70px;
 		height: 100px;
 		margin: 20px 20px 20px;
 		background-color: $lgrey;
@@ -28,11 +28,17 @@
 		}
 	}
 	&__body{
-		margin-top: 20px;
+		width: 100%;
+		margin: 20px 20px 20px 0;
 		&__title{
 			display: flex;
 			align-items: center;
-			position: relative;
+			justify-content: space-between;
+			
+			&__all{
+				display: flex;
+				align-items: center;
+			}
 			&__img{
 				width: 32px;
 				height: 32px;
@@ -48,10 +54,8 @@
 			}
 			&__reply{
 				@include points($lblue);
-				margin-left: 20px;
+				
 				&__all{
-					position: absolute;
-					right: 20px;
 					margin-right: 20px;
 					&:hover{
 						cursor: pointer;
@@ -60,10 +64,9 @@
 			}
 		}
 		&__text{
-		margin-top: 5px;
-		@include points($gblue);
-		font-weight: 400;
-	
+			@include points($gblue);
+			font-weight: 400;
+			
 	}
 	}	
 

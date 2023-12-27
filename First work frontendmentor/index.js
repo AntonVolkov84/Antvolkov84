@@ -75,13 +75,23 @@ const blockAddcom = document.querySelector('.addcom');
 const blockReply = document.querySelector('.reply');
 const submitaddcom = document.getElementById('addcom');
 const addcomInput = document.querySelector('.addcom__form__input');
+const submitReply = document.querySelector('.reply__form__all');
+
+submitReply.addEventListener("submit", replySubmit);
+
+function replySubmit(event, closestId){
+console.log(event);
+console.log(closestId);
+};
 
 
 function enableBlockReply(event){
 	blockAddcom.classList.remove('activeflex');
 	blockReply.classList.add('activeflex');
-	console.log(event.target.closest('.comment').id);
+	replySubmit(event.target.closest('.comment').id);
 };
+
+
 
 submitaddcom.addEventListener("submit", logSubmit);
 function logSubmit(event){
@@ -107,7 +117,7 @@ function logSubmit(event){
 // 	console.log(event);
 // };
 
-// const submitReply = document.querySelector('.reply__form__all');
+
 
 
 

@@ -117,30 +117,115 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"data.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.data = void 0;
-var data = exports.data = {
-  y: 1
+})({"index.js":[function(require,module,exports) {
+function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure " + obj); }
+// data because of NO server
+var data = {
+  "currentUser": {
+    "image": {
+      "png": "./images/avatars/image-juliusomo.png",
+      "webp": "./images/avatars/image-juliusomo.webp"
+    },
+    "username": "juliusomo"
+  },
+  "comments": [{
+    "id": 1,
+    "content": "Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.",
+    "createdAt": "1 month ago",
+    "score": 12,
+    "user": {
+      "image": {
+        "png": "./images/avatars/image-amyrobson.png",
+        "webp": "./images/avatars/image-amyrobson.webp"
+      },
+      "username": "amyrobson"
+    },
+    "replies": []
+  }, {
+    "id": 2,
+    "content": "Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!",
+    "createdAt": "2 weeks ago",
+    "score": 5,
+    "user": {
+      "image": {
+        "png": "./images/avatars/image-maxblagun.png",
+        "webp": "./images/avatars/image-maxblagun.webp"
+      },
+      "username": "maxblagun"
+    },
+    "replies": [{
+      "id": 3,
+      "content": "If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.",
+      "createdAt": "1 week ago",
+      "score": 4,
+      "replyingTo": "maxblagun",
+      "user": {
+        "image": {
+          "png": "./images/avatars/image-ramsesmiron.png",
+          "webp": "./images/avatars/image-ramsesmiron.webp"
+        },
+        "username": "ramsesmiron"
+      }
+    }, {
+      "id": 4,
+      "content": "I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.",
+      "createdAt": "2 days ago",
+      "score": 2,
+      "replyingTo": "ramsesmiron",
+      "user": {
+        "image": {
+          "png": "./images/avatars/image-juliusomo.png",
+          "webp": "./images/avatars/image-juliusomo.webp"
+        },
+        "username": "juliusomo"
+      }
+    }]
+  }]
 };
-},{}],"index.js":[function(require,module,exports) {
-"use strict";
+var comments = data.comments;
+_objectDestructuringEmpty(data);
+console.log(data);
+comments.forEach(function (element) {
+  return createReplyElement(element);
+});
+// function fn1(element){
 
-var _data = require("./data.js");
+// console.log(element);
+// console.log(element.user.image.png);
+// console.log(element.user.username);
+// console.log(element.score);
+// console.log(element.content);
+// }
+
+// Body of js 
+var blockComment = document.querySelector('.comment');
+var blockReply = document.querySelector('.reply');
 var replyInput = document.querySelector('.reply__form__input');
 var replySubmit = document.getElementById('form');
-var blockComment = document.querySelector('.comment');
-console.log(_data.data);
-replySubmit.addEventListener('submit', createReply);
-function createReply(event) {
-  event.preventDefault();
-  blockComment.insertAdjacentHTML('afterend', "\n\t\t<div class=\"replyto\">\n\t      \t<div class=\"replyto__vl\">\n\t      \t</div>\n\t      \t<div class=\"replyto__comment\">\n\t\t        <div class=\"replyto__comment__points\">\n\t\t\t        <img class=\"replyto__comment__points__img\" src=\"images/icon-plus.svg\" alt=\"minus\"></img>\n\t\t\t        <span class=\"replyto__comment__points__point\">12</span>\n\t\t\t        <img class='replyto__comment__points__img' src='images/icon-minus.svg' alt=\"minus\"></img>\n\t\t    \t</div>\n\t        \t<div class=\"replyto__comment__body\">\n\t          \t\t<div class=\"replyto__comment__body__title\">\n\t\t\t            <img class=\"replyto__comment__body__title__img\" src=\"images/avatars/image-amyrobson.png\" alt=\"amy\">\n\t\t\t            <span class=\"replyto__comment__body__title__name\">amyrobson</span>\n\t\t\t            <span class=\"replyto__comment__body__title__time\">1 month ego</span>\n\t\t\t            <div class=\"replyto__comment__body__title__reply__all\">\n\t\t\t\t            <img src=\"images/icon-reply.svg\" alt=\"reply\">\n\t\t\t\t            <span class=\"replyto__comment__body__title__reply\">Reply</span>\n\t            \t\t</div>  \n\t          \t\t</div>\n\t          \t\t<p class=\"replyto__comment__body__text\">".concat(replyInput.value, "</p>\n\t        \t</div>\n\t      \t</div> \n    \t</div> \n\t\t"));
+var clickReplyForReply = document.querySelector('.replyto__comment__body__title__reply__all');
+var clickReply = document.querySelector('.comment__body__title__reply__all');
+console.log(blockComment);
+clickReply.addEventListener('click', enableReply);
+replySubmit.addEventListener('submit', createReplyEvent);
+clickReplyForReply.addEventListener('click', enableReply);
+function disebleReply() {
+  blockReply.classList.remove('activeflex');
 }
-},{"./data.js":"data.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+function enableReply() {
+  blockReply.classList.add('activeflex');
+  clickReply.removeEventListener('click', enableReply);
+}
+function createReplyElement(element) {
+  blockComment.insertAdjacentHTML('afterend', "\n\t\t<div class=\"replyto\">\n\t      \t<div class=\"replyto__vl\">\n\t      \t</div>\n\t      \t<div class=\"replyto__comment\">\n\t\t        <div class=\"replyto__comment__points\">\n\t\t\t        <img class=\"replyto__comment__points__img\" src=\"images/icon-plus.svg\" alt=\"minus\"></img>\n\t\t\t        <span class=\"replyto__comment__points__point\">".concat(element.score, "</span>\n\t\t\t        <img class='replyto__comment__points__img' src='images/icon-minus.svg' alt=\"minus\"></img>\n\t\t    \t</div>\n\t        \t<div class=\"replyto__comment__body\">\n\t          \t\t<div class=\"replyto__comment__body__title\">\n\t\t\t            <img class=\"replyto__comment__body__title__img\" src=\"").concat(element.user.image.png, "\" alt=\"amy\">\n\t\t\t            <span class=\"replyto__comment__body__title__name\">").concat(element.user.username, "</span>\n\t\t\t            <span class=\"replyto__comment__body__title__time\">").concat(element.createdAt, "</span>\n\t\t\t            <div class=\"replyto__comment__body__title__reply__all\">\n\t\t\t\t            <img src=\"images/icon-reply.svg\" alt=\"reply\">\n\t\t\t\t            <span class=\"replyto__comment__body__title__reply\">Reply</span>\n\t            \t\t</div>  \n\t          \t\t</div>\n\t          \t\t<p class=\"replyto__comment__body__text\">").concat(element.content, "</p>\n\t        \t</div>\n\t      \t</div> \n    \t</div> \n\t\t"));
+  disebleReply();
+}
+function createReplyEvent(event) {
+  event.preventDefault();
+  blockComment.insertAdjacentHTML('afterend', "\n\t\t<div class=\"replyto\">\n\t      \t<div class=\"replyto__vl\">\n\t      \t</div>\n\t      \t<div class=\"replyto__comment\">\n\t\t        <div class=\"replyto__comment__points\">\n\t\t\t        <img class=\"replyto__comment__points__img\" src=\"images/icon-plus.svg\" alt=\"minus\"></img>\n\t\t\t        <span class=\"replyto__comment__points__point\">0</span>\n\t\t\t        <img class='replyto__comment__points__img' src='images/icon-minus.svg' alt=\"minus\"></img>\n\t\t    \t</div>\n\t        \t<div class=\"replyto__comment__body\">\n\t          \t\t<div class=\"replyto__comment__body__title\">\n\t\t\t            <img class=\"replyto__comment__body__title__img\" src=\"".concat(data.currentUser.png, "\" alt=\"amy\">\n\t\t\t            <span class=\"replyto__comment__body__title__name\">").concat(data.currentUser.username, "</span>\n\t\t\t            <span class=\"replyto__comment__body__title__time\">Now</span>\n\t\t\t            <div class=\"replyto__comment__body__title__reply__all\">\n\t\t\t\t            <img src=\"images/icon-reply.svg\" alt=\"reply\">\n\t\t\t\t            <span class=\"replyto__comment__body__title__reply\">Reply</span>\n\t            \t\t</div>  \n\t          \t\t</div>\n\t          \t\t<p class=\"replyto__comment__body__text\">").concat(replyInput.value, "</p>\n\t        \t</div>\n\t      \t</div> \n    \t</div> \n\t\t"));
+  disebleReply();
+}
+;
+},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

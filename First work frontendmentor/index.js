@@ -69,21 +69,25 @@ const data = {
 };
 const {currentUser} = data;
 const {comments} = data;
-const {replies} = comments; 
+// const {replies} = comments; 
 const blockComment = document.querySelector('.container');
 const blockAddcom = document.querySelector('.addcom');
 const blockReply = document.querySelector('.reply');
 const submitaddcom = document.getElementById('addcom');
 const addcomInput = document.querySelector('.addcom__form__input');
 
-console.log(currentUser.username);
-console.log(comments);
+
+function enableBlockReply(event){
+	blockAddcom.classList.remove('activeflex');
+	blockReply.classList.add('activeflex');
+	console.log(event.target.closest('.comment').id);
+};
 
 submitaddcom.addEventListener("submit", logSubmit);
 function logSubmit(event){
 	const pushNewOne = {
 		"id": 11,
-     		 "content": addcomInput.value,
+     		"content": addcomInput.value,
       	"createdAt": "Now",
       	"score": 0,
       	"user": {
@@ -173,3 +177,5 @@ function createReplyElement(element, elementId){
 	      	</div> 
     	</div> 
 		`)};
+const replyComments = document.querySelectorAll('.comment__body__title__reply__all');
+replyComments.forEach ((element) => element.addEventListener ('click', enableBlockReply));

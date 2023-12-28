@@ -72,10 +72,12 @@ const {comments} = data;
 const blockComment = document.querySelector('.container');
 const blockAddcom = document.querySelector('.addcom');
 const blockReply = document.querySelector('.reply');
-const submitaddcom = document.getElementById('addcom');
+const submitaddcom = document.querySelector('.addcom__form__all');
 const addcomInput = document.querySelector('.addcom__form__input');
 const submitReply = document.querySelector('.reply__form__all');
 
+
+submitaddcom.addEventListener("submit", logSubmit);
 submitReply.addEventListener("submit", replySubmit);
 
 function replySubmit(event){
@@ -97,11 +99,8 @@ const addNewOneReply = {
     };
 const commentId = comments.find(item => item.id == idComment);
 commentId.replies.unshift(addNewOneReply);
-console.log(addNewOneReply);
-console.log(commentId.replies);
-};
-
-
+submitReply.reset();
+}
 function enableBlockReply(event){
 	blockAddcom.classList.remove('activeflex');
 	blockReply.classList.add('activeflex');
@@ -112,14 +111,8 @@ function enableBlockReply(event){
 	const name = document.querySelector('.reply__form__name');
 	name.value = "@" + findName.innerText;
 };
-
-
-
-
-
-
-submitaddcom.addEventListener("submit", logSubmit);
 function logSubmit(event){
+	event.preventDefault();
 	const pushNewOne = {
 		"id": 11,
      		"content": addcomInput.value,
@@ -134,8 +127,10 @@ function logSubmit(event){
      			},
       	"replies": []
 	};
-	comments.push(pushNewOne);
+	comments.unshift(pushNewOne);
 	createComEvent(pushNewOne);
+	submitaddcom.reset();
+	
 }
 
 comments.forEach ((element) => createComEvent(element));

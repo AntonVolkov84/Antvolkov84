@@ -69,7 +69,6 @@ const data = {
 };
 const {currentUser} = data;
 const {comments} = data;
-// const {replies} = comments; 
 const blockComment = document.querySelector('.container');
 const blockAddcom = document.querySelector('.addcom');
 const blockReply = document.querySelector('.reply');
@@ -88,7 +87,12 @@ console.log(closestId);
 function enableBlockReply(event){
 	blockAddcom.classList.remove('activeflex');
 	blockReply.classList.add('activeflex');
-	replySubmit(event.target.closest('.comment').id);
+	const id = document.querySelector('.reply__form__id');
+	id.value = (event.target.closest('.comment').id);
+	const searchName = event.target.closest('.comment__body__title');
+	const findName = searchName.querySelector('.comment__body__title__name');
+	const name = document.querySelector('.reply__form__name');
+	name.value = "@" + findName.innerText;
 };
 
 
@@ -112,21 +116,6 @@ function logSubmit(event){
 	comments.push(pushNewOne);
 	createComEvent(pushNewOne);
 }
-
-// function addToData(event) {
-// 	console.log(event);
-// };
-
-
-
-
-
-// const replyInput = document.querySelector('.reply__form__input');
-
-
-
-// const clickReplyForReply = document.querySelector('.replyto__comment__body__title__reply__all');
-
 
 comments.forEach ((element) => createComEvent(element));
 

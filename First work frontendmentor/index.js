@@ -82,12 +82,24 @@ submitReply.addEventListener("submit", replySubmit);
 
 function replySubmit(event){
 event.preventDefault();
+
+ function date_time() {
+        var current_datetime = new Date();
+        var day = current_datetime.getDate();
+        var month = current_datetime.getMonth() + 1;
+        var year = current_datetime.getFullYear();
+        var hours = current_datetime.getHours();
+        var minutes = current_datetime.getMinutes();
+        
+        return day+"."+month+"."+year+" "+hours+":"+minutes;
+    }
+
 const idComment = document.querySelector('.reply__form__id').value;
 const addNewOneReply = {
       "id": 11,
       "content": document.querySelector('.reply__form__input').value,
-      "createdAt": "Now",
-      "score": 4,
+      "createdAt": date_time(),
+      "score": 0,
       "replyingTo": document.querySelector('.reply__form__name').value,
       "user": {
         "image": { 
@@ -114,6 +126,7 @@ function enableBlockReply(event){
 	const name = document.querySelector('.reply__form__name');
 	name.value = "@" + findName.innerText;
 };
+
 function logSubmit(event){
 	event.preventDefault();
 	
@@ -189,8 +202,10 @@ function createComEvent(element){
 };
 function createReplyElement(element, elementId){
 	const block = document.getElementById(elementId); 
+	console.log(elementId);
+	
 	block.insertAdjacentHTML('afterend', `
-		<div class="replyto">
+		<div id="${element.id}" class="replyto">
 	      	<div class="replyto__vl">
 	      	</div>
 	      	<div class="replyto__comment">
@@ -201,11 +216,15 @@ function createReplyElement(element, elementId){
 		    	</div>
 	        	<div class="replyto__comment__body">
 	          		<div class="replyto__comment__body__title">
-				        <div class="replyto__comment__body__title__flx>    
-				            <img class="replyto__comment__body__title__img" src="${element.user.image.png}" alt="amy">
-				            <span class="replyto__comment__body__title__name">${element.user.username}</span>
-				            <span class="replyto__comment__body__title__time">${element.createdAt}</span>
-				        </div>    
+	          			<div class="replyto__flt">
+	          			<img class="replyto__comment__body__title__img" src="${element.user.image.png}" alt="amy">
+			            <span class="replyto__comment__body__title__name">${element.user.username}</span>
+			            <span class="replyto__comment__body__title__time">${element.createdAt}</span>
+			            </div>
+			            <div class="replyto__comment__body__title__delete__all">
+            				<img class="replyto__comment__body__title__delete__img" src="images/icon-delete.svg" alt="">
+            				<span class="replyto__comment__body__title__delete__text">Delete</span>            
+          				</div>
 			            <div class="replyto__comment__body__title__reply__all">
 				            <img src="images/icon-reply.svg" alt="reply">
 				            <span class="replyto__comment__body__title__reply">Reply</span>
@@ -215,13 +234,13 @@ function createReplyElement(element, elementId){
 	        	</div>
 	      	</div> 
     	</div> 
-`)};
-
+`)
+	
+	enableDeleteReply();
+};
 function startEventListenerDinamic(){
 const replyComments = document.querySelectorAll('.comment__body__title__reply__all');
 replyComments.forEach ((element) => element.addEventListener ('click', enableBlockReply));
-
-
 };
 
 function enableDelete(){
@@ -229,8 +248,18 @@ function enableDelete(){
 		document.querySelector('.comment__body__title__delete__all').classList.add('active');
 		document.querySelector('.comment__body__title__delete__all').addEventListener('click', blockDelete);
 	}
-
 }
+
+function enableDeleteReply(){
+		if(document.querySelector('.replyto__comment__body__title__name').innerText == currentUser.username){
+
+		document.querySelector('.replyto__comment__body__title__delete__all').classList.add('active');
+		document.querySelector('.replyto__comment__body__title__delete__all').addEventListener('click', blockDelete);
+	}
+}
+
+
+
 function blockDelete(){
 	const delLi = (event.target.closest('.comment'));
 	document.querySelector('.wrapper').classList.add('active');
@@ -241,9 +270,7 @@ function blockDelete(){
 	const divRemove = document.querySelector('.modal__buttons__yes');
 	divRemove.addEventListener('click', removeDiv(delLi));
 }
-function removeDiv(f){
-	console.log(f);
-}
+
 
 function blockDeleteRemove(){
 	const del = document.querySelector('.wrapper');

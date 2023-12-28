@@ -2,6 +2,11 @@
 @import '_mixin';
 .replyto{
 	display: flex;
+	&__flt{
+		display: flex;
+		align-items: center;
+
+	}
 
 	
 	&__vl{
@@ -48,15 +53,10 @@
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
-				&__flx{
-					display: flex;
-					align-items: center;
-				}
+				
 
 				&__delete__all{
 				display: none;
-				position: absolute;
-				right: 150px;
 				}
 				&__delete__text{
 					@include points($sred);

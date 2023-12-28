@@ -80,7 +80,7 @@ submitReply.addEventListener("submit", replySubmit);
 
 function replySubmit(event){
 event.preventDefault();
-const id = document.querySelector('.reply__form__id').value;
+const idComment = document.querySelector('.reply__form__id').value;
 const addNewOneReply = {
       "id": 11,
       "content": document.querySelector('.reply__form__input').value,
@@ -95,7 +95,11 @@ const addNewOneReply = {
         "username": currentUser.username
       }
     };
-}
+const commentId = comments.find(item => item.id == idComment);
+commentId.replies.unshift(addNewOneReply);
+console.log(addNewOneReply);
+console.log(commentId.replies);
+};
 
 
 function enableBlockReply(event){

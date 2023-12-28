@@ -37,6 +37,8 @@
 
 			&__delete__all{
 				display: none;
+				margin-left: 180px;
+				cursor: pointer;
 			}
 			&__delete__text{
 				@include points($sred);

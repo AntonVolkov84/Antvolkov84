@@ -101,6 +101,8 @@ const commentId = comments.find(item => item.id == idComment);
 commentId.replies.unshift(addNewOneReply);
 submitReply.reset();
 createReplyElement(addNewOneReply, idComment);
+blockReply.classList.remove('activeflex');
+blockAddcom.classList.add('activeflex');
 }
 function enableBlockReply(event){
 	blockAddcom.classList.remove('activeflex');
@@ -183,6 +185,7 @@ function createComEvent(element){
 		element.replies.forEach ((element) => createReplyElement(element, elementId));
 	};
 	startEventListenerDinamic();
+	enableDelete();
 };
 function createReplyElement(element, elementId){
 	const block = document.getElementById(elementId); 
@@ -198,9 +201,11 @@ function createReplyElement(element, elementId){
 		    	</div>
 	        	<div class="replyto__comment__body">
 	          		<div class="replyto__comment__body__title">
-			            <img class="replyto__comment__body__title__img" src="${element.user.image.png}" alt="amy">
-			            <span class="replyto__comment__body__title__name">${element.user.username}</span>
-			            <span class="replyto__comment__body__title__time">${element.createdAt}</span>
+				        <div class="replyto__comment__body__title__flx>    
+				            <img class="replyto__comment__body__title__img" src="${element.user.image.png}" alt="amy">
+				            <span class="replyto__comment__body__title__name">${element.user.username}</span>
+				            <span class="replyto__comment__body__title__time">${element.createdAt}</span>
+				        </div>    
 			            <div class="replyto__comment__body__title__reply__all">
 				            <img src="images/icon-reply.svg" alt="reply">
 				            <span class="replyto__comment__body__title__reply">Reply</span>
@@ -210,19 +215,48 @@ function createReplyElement(element, elementId){
 	        	</div>
 	      	</div> 
     	</div> 
-		`)};
+`)};
 
 function startEventListenerDinamic(){
 const replyComments = document.querySelectorAll('.comment__body__title__reply__all');
 replyComments.forEach ((element) => element.addEventListener ('click', enableBlockReply));
-enableDelete();
+
+
 };
 
 function enableDelete(){
 	if(document.querySelector('.comment__body__title__name').innerText == currentUser.username){
 		document.querySelector('.comment__body__title__delete__all').classList.add('active');
-	}else if(document.querySelector('.replyto__comment__body__title__name').innerText == currentUser.username){
-		document.querySelector('.comment__body__title__delete__all').classList.add('active');
-	}	
+		document.querySelector('.comment__body__title__delete__all').addEventListener('click', blockDelete);
+	}
 
+}
+function blockDelete(){
+	const delLi = (event.target.closest('.comment'));
+	document.querySelector('.wrapper').classList.add('active');
+	const close = document.querySelector('.modal__title__all__close');
+	const no = document.querySelector('.modal__buttons__no');
+	no.addEventListener('click', blockDeleteRemove);
+	close.addEventListener('click', blockDeleteRemove);
+	const divRemove = document.querySelector('.modal__buttons__yes');
+	divRemove.addEventListener('click', removeDiv(delLi));
+}
+function removeDiv(f){
+	console.log(f);
+}
+
+function blockDeleteRemove(){
+	const del = document.querySelector('.wrapper');
+	del.classList.remove('active');
+
+};
+
+const close = document.querySelector('.modal__title__all__close');
+const no = document.querySelector('.modal__buttons__no');
+no.addEventListener('click', blockDeleteRemove);
+close.addEventListener('click', blockDeleteRemove);
+
+function blockDeleteRemove(){
+	const del = document.querySelector('.wrapper');
+	del.classList.remove('active');
 }

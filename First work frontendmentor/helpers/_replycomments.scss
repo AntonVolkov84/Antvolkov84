@@ -47,7 +47,21 @@
 			&__title{
 				display: flex;
 				align-items: center;
-				position: relative;
+				justify-content: space-between;
+				&__flx{
+					display: flex;
+					align-items: center;
+				}
+
+				&__delete__all{
+				display: none;
+				position: absolute;
+				right: 150px;
+				}
+				&__delete__text{
+					@include points($sred);
+				}
+
 				&__img{
 					width: 32px;
 					height: 32px;
@@ -65,7 +79,7 @@
 					@include points($lblue);
 					margin-left: 20px;
 					&__all{
-						position: absolute;
+						
 						right: 20px;
 						margin-right: 20px;
 						&:hover{

@@ -5,7 +5,7 @@ const data = {
       "png": "./images/avatars/image-juliusomo.png",
       "webp": "./images/avatars/image-juliusomo.webp"
     },
-    "username": "juliusomo"
+    "username": "antvolkov"
   },
   "comments": [
     {
@@ -100,6 +100,7 @@ const addNewOneReply = {
 const commentId = comments.find(item => item.id == idComment);
 commentId.replies.unshift(addNewOneReply);
 submitReply.reset();
+createReplyElement(addNewOneReply, idComment);
 }
 function enableBlockReply(event){
 	blockAddcom.classList.remove('activeflex');
@@ -113,10 +114,22 @@ function enableBlockReply(event){
 };
 function logSubmit(event){
 	event.preventDefault();
+	
+	 function date_time() {
+        var current_datetime = new Date();
+        var day = current_datetime.getDate();
+        var month = current_datetime.getMonth() + 1;
+        var year = current_datetime.getFullYear();
+        var hours = current_datetime.getHours();
+        var minutes = current_datetime.getMinutes();
+        
+        return day+"."+month+"."+year+" "+hours+":"+minutes;
+    }
+
 	const pushNewOne = {
 		"id": 11,
      		"content": addcomInput.value,
-      	"createdAt": "Now",
+      	"createdAt": date_time(),
       	"score": 0,
       	"user": {
         	"image": { 

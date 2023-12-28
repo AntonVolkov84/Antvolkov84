@@ -34,6 +34,13 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+
+			&__delete__all{
+				display: none;
+			}
+			&__delete__text{
+				@include points($sred);
+			}
 			
 			&__all{
 				display: flex;

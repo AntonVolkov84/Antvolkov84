@@ -163,7 +163,11 @@ function createComEvent(element){
             <img class="comment__body__title__img" src=${element.user.image.png} alt="amy">
             <span class="comment__body__title__name">${element.user.username}</span>
             <span class="comment__body__title__time">${element.createdAt}</span>
-          </div>  
+          </div> 
+          <div class="comment__body__title__delete__all">
+            <img class="comment__body__title__delete__img" src="images/icon-delete.svg" alt="">
+            <span class="comment__body__title__delete__text">Delete</span>            
+          </div> 
           <div class="comment__body__title__reply__all">
             <img src="images/icon-reply.svg" alt="reply">
             <span class="comment__body__title__reply">Reply</span>
@@ -173,6 +177,7 @@ function createComEvent(element){
     </div>
 </div>
 `);
+	
 	const elementId = element.id;
 	if (element.replies.length > 0){
 		element.replies.forEach ((element) => createReplyElement(element, elementId));
@@ -210,4 +215,14 @@ function createReplyElement(element, elementId){
 function startEventListenerDinamic(){
 const replyComments = document.querySelectorAll('.comment__body__title__reply__all');
 replyComments.forEach ((element) => element.addEventListener ('click', enableBlockReply));
+enableDelete();
 };
+
+function enableDelete(){
+	if(document.querySelector('.comment__body__title__name').innerText == currentUser.username){
+		document.querySelector('.comment__body__title__delete__all').classList.add('active');
+	}else if(document.querySelector('.replyto__comment__body__title__name').innerText == currentUser.username){
+		document.querySelector('.comment__body__title__delete__all').classList.add('active');
+	}	
+
+}

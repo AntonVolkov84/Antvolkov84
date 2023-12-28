@@ -78,10 +78,24 @@ const submitReply = document.querySelector('.reply__form__all');
 
 submitReply.addEventListener("submit", replySubmit);
 
-function replySubmit(event, closestId){
-console.log(event);
-console.log(closestId);
-};
+function replySubmit(event){
+event.preventDefault();
+const id = document.querySelector('.reply__form__id').value;
+const addNewOneReply = {
+      "id": 11,
+      "content": document.querySelector('.reply__form__input').value,
+      "createdAt": "Now",
+      "score": 4,
+      "replyingTo": document.querySelector('.reply__form__name').value,
+      "user": {
+        "image": { 
+          "png": currentUser.image.png,
+          "webp": "./images/avatars/image-ramsesmiron.webp"
+        },
+        "username": currentUser.username
+      }
+    };
+}
 
 
 function enableBlockReply(event){
@@ -94,6 +108,9 @@ function enableBlockReply(event){
 	const name = document.querySelector('.reply__form__name');
 	name.value = "@" + findName.innerText;
 };
+
+
+
 
 
 

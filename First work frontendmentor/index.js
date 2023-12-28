@@ -177,6 +177,7 @@ function createComEvent(element){
 	if (element.replies.length > 0){
 		element.replies.forEach ((element) => createReplyElement(element, elementId));
 	};
+	startEventListenerDinamic();
 };
 function createReplyElement(element, elementId){
 	const block = document.getElementById(elementId); 
@@ -205,5 +206,8 @@ function createReplyElement(element, elementId){
 	      	</div> 
     	</div> 
 		`)};
+
+function startEventListenerDinamic(){
 const replyComments = document.querySelectorAll('.comment__body__title__reply__all');
 replyComments.forEach ((element) => element.addEventListener ('click', enableBlockReply));
+};

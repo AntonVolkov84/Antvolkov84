@@ -203,7 +203,7 @@ function createComEvent(element){
 function createReplyElement(element, elementId){
 	const block = document.getElementById(elementId); 
 	block.insertAdjacentHTML('afterend', `
-		<div id="${element.id}" class="replyto">
+		<div id="${element.id}" data-id="1" class="replyto">
 	      	<div class="replyto__vl">
 	      	</div>
 	      	<div class="replyto__comment">
@@ -249,11 +249,33 @@ function enableDeleteReply(element){
 
 function startEventListenerDinamicReply(){
 const searchDel = document.querySelectorAll('.replyto__comment__body__title__delete__all');
-searchDel.forEach ((element) => element.addEventListener('click', blockDelete));
+searchDel.forEach ((element) => element.addEventListener('click', blockDeleteReply));
+};
+function blockDeleteReply(){
+	const delLi = (event.target.closest('.replyto'));
+	delLi.classList.add('remove');
+	document.querySelector('.wrapper').classList.add('active');
+	const close = document.querySelector('.modal__title__all__close');
+	const no = document.querySelector('.modal__buttons__no');
+	no.addEventListener('click', blockDeleteRemove);
+	close.addEventListener('click', blockDeleteRemove);
+	const yes = document.querySelector('.modal__buttons__yes');
+	yes.addEventListener('click', dellNull);	
+}
+
+function dellNull(){
+const l = document.querySelector('.remove');
+l.remove();
+document.querySelector('.wrapper').classList.remove('active');
 };
 
-
-
+function blockDeleteRemove(){
+	const del = document.querySelector('.wrapper');
+	del.classList.remove('active');
+	const l = document.querySelector('.remove');
+	console.log(l);
+	l.classList.remove('remove');
+};
 
 function startEventListenerDinamic(){
 const replyComments = document.querySelectorAll('.comment__body__title__reply__all');
@@ -269,26 +291,21 @@ function enableDelete(){
 }
 function blockDelete(){
 	const delLi = (event.target.closest('.comment'));
+	delLi.classList.add('remove');
 	document.querySelector('.wrapper').classList.add('active');
 	const close = document.querySelector('.modal__title__all__close');
 	const no = document.querySelector('.modal__buttons__no');
 	no.addEventListener('click', blockDeleteRemove);
 	close.addEventListener('click', blockDeleteRemove);
+	const yes = document.querySelector('.modal__buttons__yes');
+	yes.addEventListener('click', dellNull);
 }
 
 
-function blockDeleteRemove(){
-	const del = document.querySelector('.wrapper');
-	del.classList.remove('active');
 
-};
 
 const close = document.querySelector('.modal__title__all__close');
 const no = document.querySelector('.modal__buttons__no');
 no.addEventListener('click', blockDeleteRemove);
 close.addEventListener('click', blockDeleteRemove);
 
-function blockDeleteRemove(){
-	const del = document.querySelector('.wrapper');
-	del.classList.remove('active');
-}

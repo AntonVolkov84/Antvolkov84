@@ -202,8 +202,6 @@ function createComEvent(element){
 };
 function createReplyElement(element, elementId){
 	const block = document.getElementById(elementId); 
-	console.log(elementId);
-	
 	block.insertAdjacentHTML('afterend', `
 		<div id="${element.id}" class="replyto">
 	      	<div class="replyto__vl">
@@ -221,7 +219,7 @@ function createReplyElement(element, elementId){
 			            <span class="replyto__comment__body__title__name">${element.user.username}</span>
 			            <span class="replyto__comment__body__title__time">${element.createdAt}</span>
 			            </div>
-			            <div class="replyto__comment__body__title__delete__all">
+			            <div class="replyto__comment__body__title__delete__all ${enableDeleteReply(element)}">
             				<img class="replyto__comment__body__title__delete__img" src="images/icon-delete.svg" alt="">
             				<span class="replyto__comment__body__title__delete__text">Delete</span>            
           				</div>
@@ -236,8 +234,24 @@ function createReplyElement(element, elementId){
     	</div> 
 `)
 	
-	enableDeleteReply();
+	// enableDeleteReply(element.user.username);
 };
+function enableDeleteReply(element){
+		console.log(element.user.username)
+		if(element.user.username == currentUser.username){
+		return "active";	
+	}else{
+		return;
+	}
+	};
+
+
+
+
+
+
+
+
 function startEventListenerDinamic(){
 const replyComments = document.querySelectorAll('.comment__body__title__reply__all');
 replyComments.forEach ((element) => element.addEventListener ('click', enableBlockReply));
@@ -250,13 +264,14 @@ function enableDelete(){
 	}
 }
 
-function enableDeleteReply(){
-		if(document.querySelector('.replyto__comment__body__title__name').innerText == currentUser.username){
-
-		document.querySelector('.replyto__comment__body__title__delete__all').classList.add('active');
-		document.querySelector('.replyto__comment__body__title__delete__all').addEventListener('click', blockDelete);
-	}
-}
+// function enableDeleteReply(element){
+// 		console.log(element)
+// 		document.querySelector('.replyto__comment__body__title__delete__all').addEventListener('click', blockDelete);
+// 		if(element == currentUser.username){
+// 		document.querySelector('.replyto__comment__body__title__delete__all').classList.add('active');
+		
+// 	}
+// }
 
 
 
@@ -267,8 +282,6 @@ function blockDelete(){
 	const no = document.querySelector('.modal__buttons__no');
 	no.addEventListener('click', blockDeleteRemove);
 	close.addEventListener('click', blockDeleteRemove);
-	const divRemove = document.querySelector('.modal__buttons__yes');
-	divRemove.addEventListener('click', removeDiv(delLi));
 }
 
 

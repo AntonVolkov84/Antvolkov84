@@ -234,20 +234,23 @@ function createReplyElement(element, elementId){
     	</div> 
 `)
 	
-	// enableDeleteReply(element.user.username);
+startEventListenerDinamicReply();
 };
+
+
 function enableDeleteReply(element){
-		console.log(element.user.username)
 		if(element.user.username == currentUser.username){
 		return "active";	
 	}else{
 		return;
 	}
-	};
 
+};
 
-
-
+function startEventListenerDinamicReply(){
+const searchDel = document.querySelectorAll('.replyto__comment__body__title__delete__all');
+searchDel.forEach ((element) => element.addEventListener('click', blockDelete));
+};
 
 
 
@@ -261,20 +264,9 @@ function enableDelete(){
 	if(document.querySelector('.comment__body__title__name').innerText == currentUser.username){
 		document.querySelector('.comment__body__title__delete__all').classList.add('active');
 		document.querySelector('.comment__body__title__delete__all').addEventListener('click', blockDelete);
+
 	}
 }
-
-// function enableDeleteReply(element){
-// 		console.log(element)
-// 		document.querySelector('.replyto__comment__body__title__delete__all').addEventListener('click', blockDelete);
-// 		if(element == currentUser.username){
-// 		document.querySelector('.replyto__comment__body__title__delete__all').classList.add('active');
-		
-// 	}
-// }
-
-
-
 function blockDelete(){
 	const delLi = (event.target.closest('.comment'));
 	document.querySelector('.wrapper').classList.add('active');

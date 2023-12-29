@@ -14,8 +14,8 @@
 	&__form{
 		margin-left: 20px;
 		margin-top: 20px;
-		&__id {display: block};
-		&__name {display: block};
+		&__id {display: none};
+		&__name {display: none};
 
 		&__input{
 			border:1px solid $mblue;

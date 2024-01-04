@@ -309,3 +309,15 @@ const no = document.querySelector('.modal__buttons__no');
 no.addEventListener('click', blockDeleteRemove);
 close.addEventListener('click', blockDeleteRemove);
 
+// Прототипное наследование
+
+// class Player2{
+// 	constructor(login, score = 100){
+// 		this.login = login;
+// 		this. score = score;
+// 	}
+// 	addToData() {
+// 		this.push(data);
+// 	}
+	
+// }

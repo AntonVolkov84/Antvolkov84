@@ -11,3 +11,176 @@ body{
 	font-family: rubik;
 	color: white;
 }
+.dashboard{
+	margin-top: 5rem;
+	min-height: 1vh;
+	padding: 4 rem 0.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	&__person{
+		width: 100%;
+		background-color: $blue500;
+		border-radius: 10px;
+	};
+
+	&__content{
+		width: 100%;
+		max-width: 900px;
+		margin: 0 auto;
+		display: grid;
+		gap: 1.5rem;	
+		justify-content: center;
+		grid-template-columns: repeat(1, minmax(300px, 330px));
+
+	};
+	&__item{
+		width: 100%;
+		padding-top: 2.15rem;
+		background-color: white;
+		border-radius: 13px;
+		background-repeat: no-repeat;
+		background-position: 95% -8%;
+
+	}
+
+}
+.info-card{
+	background-color: $blue400;
+	border-radius: 10px;
+	padding: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	&__photo{
+	width: 50px;
+	height: 50px;
+	border: solid 3px white;
+	border-radius: 50%;	
+	}
+	&__card__subtitle{};
+	&__title{
+		font-weight: 200;
+	};
+}
+.view-selector{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	&__item{
+		font-size: 12px;
+		color: $blue200;
+		cursor: pointer;
+		&:hover{
+			color: white;
+		}
+	}
+}
+.active{
+	color: white;
+}
+.tracking-card{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: $blue500;
+	padding: 2rem;
+	border-radius: 10px;
+
+	&__title{
+		font-weight: 400;
+		font-size: 18px;
+	}
+	&__menu{
+		height: 5px;
+	}
+	&__header{
+		width: 100%;
+		max-width: 900px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__body{
+		margin-top: 1rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__time{
+		font-size: 3rem;
+		font-weight: 200;
+	}
+	&__prev-period{
+		color: $blue200;
+		font-size: 1rem;
+
+	}
+}
+.tracking-card:hover{
+		background-color: $blue400;
+}
+.dashboard__item--work{
+	background-color: $red100;
+	background-image: url(images/icon-work.svg);
+}
+.dashboard__item--play{
+	background-color: $blue100;
+	background-image: url(images/icon-play.svg);
+}
+.dashboard__item--study{
+	background-color: $red200;
+	background-image: url(images/icon-study.svg);
+}
+.dashboard__item--exercise{
+	background-color: $green100;
+	background-image: url(images/icon-exercise.svg);
+}
+.dashboard__item--social{
+	background-color: $violet100;
+	background-image: url(images/icon-social.svg);
+}
+.dashboard__item--self-care{
+	background-color: $orange100;
+	background-image: url(images/icon-self-care.svg);
+}
+@media (min-width: 1024px){
+.dashboard__content{
+	display: grid;
+	grid-template-columns: (1fr 1fr 1fr 1fr);
+	grid-template-rows: (1fr 1fr);
+	}
+.dashboard__person{
+	grid-row-start: 1;
+	grid-row-end: 3;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	}
+.info-card{
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	flex-grow: 1;
+}
+.view-selector{
+	flex-direction: column;
+	align-items: flex-start;
+	margin-left: 2rem;
+}
+.tracking-card__body{
+	flex-direction: column;
+	align-items: flex-start;
+}
+.view-selector__item{
+	margin-bottom: 1rem;
+	font-size: 18px;
+}
+}
+.attribution{
+	text-align: center;
+	margin-top: 3rem;
+}

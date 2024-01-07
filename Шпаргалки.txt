@@ -5,6 +5,8 @@ https://www.fontsquirrel.com/tools/webfont-generator - генератор шри
 https://www.photopea.com/ - онлайн аналог фотошопа
 https://github.com/AntonVolkov84/Antvolkov84.git - мой репозиторий гит хаб
 https://html.spec.whatwg.org/multipage/named-characters.html - сущности, через амперсант
+https://morphismail.github.io/myInstruments/ - генератор треугольников
+http://embedresponsively.com/ - coздание адаптивных видео
 
 Полезные библиотеки JavaScript
 https://atomiks.github.io/tippyjs/v6/customization/ - всплывающая пояснялка

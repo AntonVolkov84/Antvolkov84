@@ -103,3 +103,50 @@ i {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 
 }
+.itd_img{
+	max-width: 260px;
+	height: 100%;
+}
+.itdpb{
+	padding: 100px 0 0 0; 
+}
+.itd_ot{
+	margin: 0 auto;
+	border: 3px solid $color1;
+	border-radius: 50%;
+}
+.line_bg{
+	border-bottom: solid 3px $color2;
+	width: 100px;
+	margin: 0 auto;
+}
+.btn-itd2{
+	@extend .btn-itd;
+	background-color: $color1;
+}
+.icon-mod{
+	color: white;
+	
+}
+.itd_circle2{
+	width: 40px;
+	height: 40px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	&:hover{
+		.icon-mod{
+		color: black;
+		}
+	}
+}
+footer{
+	padding: 30px 0;
+}
+.checkout{
+	height: 500px;
+	&_wrapper{
+		height: 500px;
+	}
+}

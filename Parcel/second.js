@@ -1,1 +1,0 @@
-export const test = "Volkov Anton best developer";

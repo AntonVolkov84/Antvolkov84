@@ -1,0 +1,13 @@
+.info {
+  border: 2px grey solid;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 40%;
+  margin: 10px auto;
+  &__h {
+    color: violet;
+  }
+}
+.myOtherButton {
+  background-color: coral;
+}

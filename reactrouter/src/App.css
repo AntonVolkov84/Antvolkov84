@@ -1,0 +1,64 @@
+body {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.App {
+  text-align: center;
+}
+.active {
+  color: red;
+}
+.menu {
+  min-height: 50px;
+  width: 100%;
+  background-color: bisque;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.menu__link {
+  height: 50px;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu__link:hover {
+  background-color: blueviolet;
+
+  color: white;
+}
+h1 {
+  cursor: grab;
+}
+.courses__title {
+  color: grey;
+  text-decoration: none;
+  font-size: 1rem;
+}
+.courses {
+  display: flex;
+  justify-content: space-around;
+}
+.coures.active {
+  color: blueviolet;
+}
+.course__text {
+  width: 200px;
+  text-align: start;
+}
+.course__div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.courses__btn {
+  margin: 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}

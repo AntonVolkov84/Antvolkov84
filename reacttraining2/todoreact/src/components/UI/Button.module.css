@@ -8,9 +8,11 @@
   border-radius: 5px;
   padding: 10px 15px;
 }
+
 .button:hover {
   background-color: rgb(240, 240, 155);
 }
+
 button:title {
   color: red;
-}
+}/*# sourceMappingURL=Button.module.css.map */

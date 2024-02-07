@@ -1,0 +1,162 @@
+bode {
+  perspective: 1000px;
+}
+.App {
+  text-align: center;
+  background-color: rgb(22, 4, 4);
+  height: 1000px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+nav a {
+  margin: 20px;
+  text-decoration: none;
+}
+
+.menu {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(22, 4, 4);
+}
+.menu__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  width: 300px;
+  height: 100%;
+  font-weight: bold;
+}
+.menu__item:hover {
+  background-color: red;
+  color: rgb(22, 4, 4);
+}
+.active {
+  color: orangered;
+}
+.card {
+  margin: 50px auto 0;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: -3px 8px 20px red;
+  transition: all 0.5s easy;
+  background-image: url('../image/1707331729841.jpg');
+  background-size: cover;
+}
+.card__head {
+  height: 150px;
+  width: 100%;
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card__head__date {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  position: absolute;
+  left: 30px;
+  top: 80px;
+  box-shadow: -2px 5px 100px red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.card__text {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.card__text__title {
+  color: white;
+  display: block;
+  margin-top: 0;
+  padding-top: 100px;
+  padding-left: 30px;
+  text-shadow: red 1px 0 10px;
+}
+.card__text__content {
+  text-align: left;
+  color: aliceblue;
+  padding: 0 30px;
+  text-shadow: red 1px 0 10px;
+}
+.card__text__link {
+  padding-left: 30px;
+  padding-top: 30px;
+  color: red;
+  text-decoration: none;
+  text-shadow: -2px 5px 20px red;
+}
+.wrapper {
+  perspective: 1000px;
+}
+.card:hover {
+  transition: all 0.5s easy;
+  background-position: 80%;
+  transition: 1s;
+  transform: rotateY(30deg);
+}
+.card__head__date__day {
+  color: aliceblue;
+  text-shadow: -2px 5px 100px red;
+}
+.card__head__date__month {
+  color: aliceblue;
+  text-shadow: -2px 5px 100px red;
+}
+.home {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.card__math {
+  margin: 50px auto 0;
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: -3px 8px 20px red;
+  transition: all 0.5s easy;
+  background-image: url('../image/cardMath.jpg');
+  background-size: cover;
+}
+.card__math:hover {
+  transition: all 0.5s easy;
+  background-position: 80%;
+  transition: 1s;
+  transform: rotateY(30deg);
+}

@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { dataEnglishTest } from './dataEnglishTest';
-
+let acc = 0;
 function Test(props) {
   const [answer, setAnswer] = useState(null);
   return (
@@ -13,39 +12,31 @@ function Test(props) {
       <hr className="test__answer__hr"></hr>
       <h2 className="test__answer__title">Варианты ответа</h2>
       <div className="test__answer__text">
-        <form onSubmit={pickAnswer} className="test__answer__text__variants">
-          <label>
-            <input
-              checked={answer === props.answers[0]}
-              onChange={() => setAnswer(props.answers[0])}
-              type="radio"
-            />
-            {props.answers[0]}
-          </label>
-          <label>
-            <input
-              checked={answer === props.answers[1]}
-              onChange={() => setAnswer(props.answers[1])}
-              type="radio"
-            />
-            {props.answers[1]}
-          </label>
-          <label>
-            <input
-              checked={answer === props.answers[2]}
-              onChange={() => setAnswer(props.answers[2])}
-              type="radio"
-            />
-            {props.answers[2]}
-          </label>
-          <label>
-            <input
-              checked={answer === props.answers[3]}
-              onChange={() => setAnswer(props.answers[3])}
-              type="radio"
-            />
-            {props.answers[3]}
-          </label>
+        <form
+          data-list={answer}
+          onSubmit={(event) => {
+            event.preventDefault();
+            event.target.dataset.list === props.rightAnswer
+              ? (acc = acc + 1)
+              : (acc = acc);
+            console.log(acc);
+          }}
+          className="test__answer__text__variants"
+        >
+          {props.answers.map((item) => {
+            return (
+              <label key={item}>
+                <input
+                  value={item}
+                  checked={answer === item}
+                  onChange={() => setAnswer(item)}
+                  type="radio"
+                />
+                {item}
+              </label>
+            );
+          })}
+
           <button type="submit" className="btn">
             Відправити
           </button>
@@ -55,7 +46,3 @@ function Test(props) {
   );
 }
 export default Test;
-function pickAnswer(event) {
-  event.preventDefault();
-  console.log(event.target);
-}

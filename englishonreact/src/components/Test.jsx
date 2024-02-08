@@ -1,9 +1,10 @@
+import { isDisabled } from '@testing-library/user-event/dist/utils';
 import { useState } from 'react';
 let acc = 0;
 function Test(props) {
   const [answer, setAnswer] = useState(null);
   return (
-    <div className="test">
+    <div id={props.id} className="test">
       <h2 className="test__title">Вопрос {props.id}</h2>
       <div className="test__head">
         <img className="test__head__img" src={props.img} alt="first" />
@@ -20,6 +21,7 @@ function Test(props) {
               ? (acc = acc + 1)
               : (acc = acc);
             console.log(acc);
+            document.getElementById(`${props.id}`).classList.add('dis');
           }}
           className="test__answer__text__variants"
         >

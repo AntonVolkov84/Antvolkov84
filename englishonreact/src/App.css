@@ -192,3 +192,7 @@ nav a {
   cursor: pointer;
   box-shadow: 0px 2px 10px red;
 }
+.dis {
+  pointer-events: none;
+  cursor: default;
+}

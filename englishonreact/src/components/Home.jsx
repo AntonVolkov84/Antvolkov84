@@ -1,13 +1,12 @@
-import { Outlet } from 'react-router-dom';
-import Menu from './Menu';
-import CardEnglish from './CardEnglish';
-import CardMath from './CardMath';
+import Card from './Card';
+import { data } from '../data';
 
 const Home = () => {
   return (
     <div className="home">
-      <CardEnglish />
-      <CardMath />
+      {data.map((card) => {
+        return <Card key={card.forStyle} {...card} />;
+      })}
     </div>
   );
 };

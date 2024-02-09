@@ -18,6 +18,9 @@ function Test(props) {
         <form
           data-list={answer}
           onSubmit={(event) => {
+            if (!event.target.dataset.list) {
+              return alert('Ви не обрали відповідь');
+            }
             event.preventDefault();
             allQuestion = allQuestion + 1;
             event.target.dataset.list === props.rightAnswer

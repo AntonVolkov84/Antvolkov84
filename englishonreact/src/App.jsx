@@ -16,7 +16,6 @@ function App() {
     setRight(right);
     setAllAnswer(allAnswer);
   }
-  console.log(right, allAnswer);
   return (
     <BrowserRouter>
       <div className="App">
@@ -24,7 +23,10 @@ function App() {
           <Route path="/" element={<MainLayout />}>
             <Route path="about" element={<About />} />
             <Route path="english" element={<EnglishTest result={result} />} />
-            <Route path="result" element={<Result />} />
+            <Route
+              path="result"
+              element={<Result right={right} allAnswer={allAnswer} />}
+            />
             <Route index element={<Home />} />
             <Route path="contacts" element={<Contacts />} />
             <Route path="*" element={<NotFound />} />

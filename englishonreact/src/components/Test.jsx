@@ -1,7 +1,9 @@
-import { isDisabled } from '@testing-library/user-event/dist/utils';
 import { useState } from 'react';
 let acc = 0;
+let allQuestion = 0;
 function Test(props) {
+  let res = props.result;
+
   const [answer, setAnswer] = useState(null);
   return (
     <div id={props.id} className="test">
@@ -17,11 +19,12 @@ function Test(props) {
           data-list={answer}
           onSubmit={(event) => {
             event.preventDefault();
+            allQuestion = allQuestion + 1;
             event.target.dataset.list === props.rightAnswer
               ? (acc = acc + 1)
               : (acc = acc);
-            console.log(acc);
             document.getElementById(`${props.id}`).classList.add('dis');
+            res(acc, allQuestion);
           }}
           className="test__answer__text__variants"
         >

@@ -1,10 +1,15 @@
-import { Link } from 'react-router-dom';
+import { Link, Redirect, useNavigate } from 'react-router-dom';
 
 function Card(props) {
-  console.log(props);
+  const navigate = useNavigate();
   return (
     <div className="wrapper">
-      <div className={`card ${props.forStyle}`}>
+      <div
+        onClick={() => {
+          return navigate(`${props.forStyle}`);
+        }}
+        className={`card ${props.forStyle}`}
+      >
         <div className="card__head">
           <div className="card__head__back"></div>
           <div className="card__head__date">
@@ -23,5 +28,4 @@ function Card(props) {
     </div>
   );
 }
-
 export default Card;

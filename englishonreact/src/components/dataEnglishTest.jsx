@@ -25,7 +25,7 @@ export const dataEnglishTest = [
     id: 4,
     question: 'Look! This young lady____________vey well now!',
     answers: ['dances', 'is dance', 'dance', 'is dancing'],
-    rightAnswer: 'is dance',
+    rightAnswer: 'is dancing',
     img: '../englishImg/forth.jpg',
   },
   {

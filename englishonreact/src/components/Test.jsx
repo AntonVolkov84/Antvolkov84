@@ -12,8 +12,10 @@ function Test(props) {
         <img className="test__head__img" src={props.img} alt="first" />
         <h3 className="test__head__question">{props.question}</h3>
       </div>
-      <hr className="test__answer__hr"></hr>
-      <h2 className="test__answer__title">Варианты ответа</h2>
+      <div className="test__answer__two">
+        <hr className="test__answer__hr"></hr>
+        <h2 className="test__answer__title">Варианты ответа</h2>
+      </div>
       <div className="test__answer__text">
         <form
           data-list={answer}

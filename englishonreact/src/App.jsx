@@ -8,6 +8,8 @@ import MainLayout from './layouts/MainLayout';
 import EnglishTest from './components/EnglishTest';
 import Result from './components/Result';
 import { useState } from 'react';
+import MathTest from './components/MathTest';
+import LogicaTest from './components/LogicaTest';
 
 function App() {
   const [right, setRight] = useState(0);
@@ -16,6 +18,7 @@ function App() {
     setRight(right);
     setAllAnswer(allAnswer);
   }
+  console.log(document.getElementById('closeResultButton'));
   return (
     <BrowserRouter>
       <div className="App">
@@ -23,14 +26,19 @@ function App() {
           <Route path="/" element={<MainLayout />}>
             <Route path="about" element={<About />} />
             <Route path="english" element={<EnglishTest result={result} />} />
+            <Route path="math" element={<MathTest result={result} />} />
+            <Route path="logica" element={<LogicaTest result={result} />} />
             <Route
               path="result"
-              element={<Result right={right} allAnswer={allAnswer} />}
+              element={
+                <Result result={result} right={right} allAnswer={allAnswer} />
+              }
             />
             <Route index element={<Home />} />
             <Route path="contacts" element={<Contacts />} />
             <Route path="*" element={<NotFound />} />
           </Route>
+          
         </Routes>
       </div>
     </BrowserRouter>

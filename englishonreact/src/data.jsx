@@ -17,14 +17,11 @@ export const data = [
     start: 'Начать испытание',
   },
   {
-    forStyle: 'phisic',
-    lesson: 'Физика',
+    forStyle: 'logica',
+    lesson: 'Логіка',
     subLesson: `${date.toDateString()}`,
-    title: 'Электричество',
-    text: 'Задачи на определение заряда и его присытствиею Простые. Сразу можно считать себя Энштейном',
+    title: 'Тести з логіки',
+    text: 'Перевір свою логічну думку!',
     start: 'Пуск',
   },
 ];
-
-
-

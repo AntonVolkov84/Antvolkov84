@@ -12,9 +12,9 @@ export const data = [
     forStyle: 'math',
     lesson: 'Математика',
     subLesson: `${date.toDateString()}`,
-    title: 'Логические',
-    text: 'Пробуйте решить все задачи, заработать наивысшее количество баллов и стать решалой',
-    start: 'Начать испытание',
+    title: 'Математичні',
+    text: 'Спробуй вирішити всі тести, отримати найвищчий рівень та стати "Рішалою"',
+    start: 'Почати випробування',
   },
   {
     forStyle: 'logica',
@@ -22,6 +22,6 @@ export const data = [
     subLesson: `${date.toDateString()}`,
     title: 'Тести з логіки',
     text: 'Перевір свою логічну думку!',
-    start: 'Пуск',
+    start: 'Розпочати',
   },
 ];

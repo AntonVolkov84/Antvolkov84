@@ -1,10 +1,14 @@
 import { useState } from 'react';
-let acc = 0;
-let allQuestion = 0;
-function Test(props) {
-  let res = props.result;
+import { useDispatch } from 'react-redux';
 
+function Test(props) {
+  const dispatch = useDispatch();
+  const addAnswer = (value) => {
+    dispatch({ type: 'ADD_ANSWERS', payload: value });
+  };
+    
   const [answer, setAnswer] = useState(null);
+
   return (
     <div id={props.id} className="test">
       <h2 className="test__title">Вопрос {props.id}</h2>
@@ -24,12 +28,10 @@ function Test(props) {
               return alert('Ви не обрали відповідь');
             }
             event.preventDefault();
-            allQuestion = allQuestion + 1;
             event.target.dataset.list === props.rightAnswer
-              ? (acc = acc + 1)
-              : (acc = acc);
+              ? addAnswer(1)
+              : addAnswer(0);
             document.getElementById(`${props.id}`).classList.add('dis');
-            res(acc, allQuestion);
           }}
           className="test__answer__text__variants"
         >

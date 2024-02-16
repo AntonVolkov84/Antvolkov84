@@ -1,0 +1,11 @@
+{
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "contacts": "Contacts"
+  },
+  "footer": {
+    "text": "This tests project create only in education purposes only. Not for commercial use!"
+  },
+  "data": "dataEN"
+}

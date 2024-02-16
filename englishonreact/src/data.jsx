@@ -2,11 +2,11 @@ let date = new Date();
 export const data = [
   {
     forStyle: 'english',
-    lesson: 'English',
+    lesson: 'Английский',
     subLesson: `${date.toDateString()}`,
     title: 'Present continuous',
-    text: 'Try to answer all questions correctly and get the highest score. Become a Present Continuous Expert',
-    start: 'Try test',
+    text: 'Попробуй ответить на все вопросы и стать экспертом настоящего продолжительного времени',
+    start: 'Загружай тесты, поехали',
   },
   {
     forStyle: 'math',

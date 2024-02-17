@@ -1,0 +1,25 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AntonVolkov84/Antonvolkov84.git"
+  },
+  "author": "Volkov Anton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntonVolkov84/Antonvolkov84/issues"
+  },
+  "homepage": "https://github.com/AntonVolkov84/Antonvolkov84#readme",
+  "dependencies": {
+    "next": "^14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

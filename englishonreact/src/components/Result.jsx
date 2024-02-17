@@ -9,7 +9,7 @@ function Result() {
   let disc = (rightAnswer / allAnswer1) * 100;
   const navigation = useNavigate();
   window.onpopstate = () => {
-    dispatch({ type: 'ADD_NULL', payload: 0});
+    dispatch({ type: 'ADD_NULL', payload: 0 });
   };
   return (
     <div className="result">
@@ -22,7 +22,13 @@ function Result() {
         {disc > 55 ? 'Да ти Халк' : 'Ох і сопля'}
       </h2>
       <Link className="btn__text" to="/">
-        <button onClick={() => navigation('/')} className="btn">
+        <button
+          onClick={() => {
+            navigation('/');
+            dispatch({ type: 'ADD_NULL', payload: 0 });
+          }}
+          className="btn"
+        >
           До інших тестів
         </button>
       </Link>

@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { createStore } from 'redux';
-import { Provider } from 'react-redux';
+import { Provider,} from 'react-redux';
 import './i18next';
 
 const defaultState = {
   rightAnswer: 0,
   allAnswer1: 0,
 };
+
 
 const reducer = (state = defaultState, action) => {
   switch (action.type) {

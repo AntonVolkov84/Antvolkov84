@@ -3,3 +3,7 @@
   padding: 0px 0px 0px 0px;
   box-sizing: border-box;
 }
+.navbar {
+  background-color: orange;
+  padding: 15px;
+}

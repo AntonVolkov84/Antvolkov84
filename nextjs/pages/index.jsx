@@ -1,30 +1,15 @@
-import Link from 'next/link';
+import Head from 'next/head';
+import A from '../components/A';
+import MainContainer from '../components/MainContainer';
 
 function index() {
   return (
-    <div>
-      <div className="navbar">
-        <Link className="link" href="">
-          Главная
-        </Link>
-        <Link className="link" href="users">
-          Пользователи
-        </Link>
+    <MainContainer keywords={'main page'}>
+      <div>
+        <h1>Hello Anton Volkov!</h1>
+        <h2>Test Next.js</h2>
       </div>
-      <h1>Hello Anton Volkov!</h1>
-      <h2>Test git hub</h2>
-      <style>
-        {`
-          .navbar {
-            background-color: orange;
-            padding: 15px;
-          }
-          .link, h1, h2{
-            margin: 10px;
-          }
-        `}
-      </style>
-    </div>
+    </MainContainer>
   );
 }
 
